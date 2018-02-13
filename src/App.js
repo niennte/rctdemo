@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import AnimatedRoutes from "./AnimatedRoutes";
 
 import Home from './Home';
@@ -20,17 +20,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="TopBar">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
+      <div className="App wrapper">
+        <div className="topBar">
+            <nav>
+          <NavLink exact to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+            </nav>
         </div>
 
 
         <AnimatedRoutes>
-          <Route exact path="/" component={Home} />
             <Route
                 path="/projects"
                 render={ (props) => (
@@ -54,6 +55,7 @@ class App extends Component {
             <Route
                 path="/contact" component={Contact}
             />
+          <Route exact path="/" component={Home} />
         </AnimatedRoutes>
       </div>
     );
