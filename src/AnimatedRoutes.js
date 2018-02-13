@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withRouter, Switch } from 'react-router-dom';
 import * as Animated from 'animated/lib/targets/react-dom';
 import { TransitionGroup, Transition } from 'react-transition-group';
+import './AnimatedRoutes.css';
 
 class AnimatedRoutes extends Component {
   static propTypes = {
@@ -59,8 +60,12 @@ class AnimatedRoutes extends Component {
       transform: Animated.template`translate3d(0, ${interpolation}, 0)`,
     };
 
+
+    const locationName = this.props.location.pathname;
+    const pageName = locationName.replace(/[\d.\/]/g, '');
+
     return (
-      <TransitionGroup component="main">
+      <TransitionGroup component="main" className={pageName}>
         <Transition
           key={currentKey}
           timeout={timeout}

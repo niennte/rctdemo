@@ -1,0 +1,16 @@
+main {
+    -webkit-transition: background 2s; /* Safari */
+    transition: background 2s;
+ }
+main.contact {
+    background: PaleVioletRed;
+}
+main.about {
+    background: DarkSalmon;
+}
+main.projects {
+    background: SteelBlue;
+}
+main.project {
+    background: #303030;
+}
