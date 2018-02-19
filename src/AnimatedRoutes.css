@@ -11,6 +11,14 @@ main.about {
 main.projects {
     background: SteelBlue;
 }
-main.project {
+main.projects.projectItem {
     background: #303030;
+}
+
+main.projects.projectItem.projectItem-2,
+main.projects.projectItem.projectItem-4,
+main.projects.projectItem.projectItem-6,
+main.projects.projectItem.projectItem-8
+{
+    background: Lavender;
 }
