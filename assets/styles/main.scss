@@ -144,6 +144,11 @@ main {
         .goBack {
             font-size: 2rem;
             cursor: pointer;
+            display: flex;
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
     }
     &.missed {

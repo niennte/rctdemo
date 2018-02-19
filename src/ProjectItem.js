@@ -51,21 +51,21 @@ class ProjectItem extends Component {
                             this.props.history.goBack();
                         }}
                     >
-                        ←
+                        &#x2191;
                     </a>
                 </Animated.span>
                 <h1>{title}</h1>
                 <p>{body}</p>
 
 
-                <Animated.span style={goBackStyle} className="goBack">
+                <Animated.span style={goBackStyle} className="goBack inlineNav">
                     <Link to ={`/projects/${id-1}`} >
-                        ←
+                        &#x27F5;
                     </Link>
                 </Animated.span>
-                <Animated.span style={goBackStyle} className="goBack">
+                <Animated.span style={goBackStyle} className=" goBack inlineNav">
                     <Link to ={`/projects/${id+1}`} >
-                        ←
+                        &#x27F6;
                     </Link>
                 </Animated.span>
 
