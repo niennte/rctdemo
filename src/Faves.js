@@ -2,54 +2,77 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import * as Animated from "animated/lib/targets/react-dom";
 import { TransitionGroup, Transition } from 'react-transition-group';
+import './Projects.css';
 
-/*
-TODO:
-Finalize behavior:
-- re-render in componentWillReceiveProps + update URL to match
-- props need to take precedence over the URL
-
-Rename Faves into Faves ))
- */
 
 class Faves extends Component {
     constructor(props) {
         super(props);
-        // todo: handle JSON.parse errors (URL can be anything)
-        // first check to see if props provide a faveList
-        // handle no projects found scenario
+
         this.state = {
             projects: [],
-            faves: JSON.parse(decodeURI(props.match.params.faveList)),
-            animations: []
+            faves: [],
+            animations: [],
+            msg: "No favorites yet. Please click some hearts "
         };
     }
+
+    componentWillMount() {
+        let search = this.props.location.search.replace("?", "");
+        if (search) {
+            try {
+                const faveListParam = JSON.parse(decodeURI(search));
+                this.props.onUpdate(faveListParam);
+            } catch(e) {
+                console.log(e);
+                this.setState({
+                    msg: "Couldn't extract favorites from URL. Please check the URL or click some hearts "
+                });
+            }
+        }
+    }
+
     componentDidMount() {
-        this._renderProjects(this.props.projects);
+        this.setState( {
+            faves: this.props.faves
+        });
+
+        if (this.state.faves.length) {
+            this._renderProjects(this.state.projects);
+        }
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.projects.length) {
+
+        this.setState( (prevState) => {
+            return {
+                faves: nextProps.faves.faveList && nextProps.faves.faveList.length ?
+                    nextProps.faves.faveList :
+                    prevState.faves
+            };
+        });
+
+        if (this.state.faves.length) {
             this._renderProjects(nextProps.projects);
         }
     }
 
     _renderProjects(projects) {
 
-
-        /*
-        TODO
-        move this into setState callback
-         */
-        const projectsToRender = projects.filter(function(p) {
+        const projectsToRender = projects.filter(function(p, i, ps) {
                 return this.indexOf(p.id) > -1;
             },
-            this.state.faves.faveList
+            this.state.faves
         );
 
         this.setState(
             {
-                projects: projectsToRender,
+                // add previous and next links
+                projects: projectsToRender.map((p, i, ps) => {
+                    p.nextProject = ps[i+1] ? ps[i+1].id : false;
+                    p.prevProject = ps[i-1] ? ps[i-1].id : false;
+                    return p;
+                }),
                 animations: projectsToRender.map((_, i) => new Animated.Value(0))
             },
             () => {
@@ -69,7 +92,20 @@ class Faves extends Component {
 
         return (
             <div className="page projects">
+
                 <h1>Faved Projects</h1>
+
+                {!this.state.projects.length ?
+                    <section>
+                        {this.state.msg}
+                        <br />
+                        <Link to="/projects" title="Projects">
+                            here
+                        </Link>.
+                    </section>
+                    : null
+                }
+
                 <TransitionGroup component="section">
                     {this.state.projects.map((p, i) => {
                         const style = {
@@ -79,7 +115,8 @@ class Faves extends Component {
                                 inputRange: [0, 1],
                                 outputRange: ["12px", "0px"]
                             })},0)
-                            `
+                            `,
+                            backgroundImage: `url(${p.image})`
                         };
                         return (
                             <Transition
@@ -89,8 +126,8 @@ class Faves extends Component {
                                 onExit={this.handleExit}
                                 appear
                                 >
-                                <Animated.div style={style}>
-                                    <Link to={`/projects/${p.id}`}>
+                                <Animated.div className="project-grid-item" style={style}>
+                                    <Link to={`/faves/${p.id}`}>
                                         {p.title}-{p.id}
                                     </Link>
                                 </Animated.div>
@@ -98,6 +135,7 @@ class Faves extends Component {
                         );
                     })}
                 </TransitionGroup>
+
             </div>
         );
     }

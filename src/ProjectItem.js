@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as Animated from "animated/lib/targets/react-dom";
 import { Link } from "react-router-dom";
+import "./ProjectItem.css";
 
 class ProjectItem extends Component {
 
@@ -8,11 +9,15 @@ class ProjectItem extends Component {
         super(props);
         this.state = {
             project: {},
-            animate: new Animated.Value(0)
+            animate: new Animated.Value(0),
+            referredBy: "projects" // default
         };
     }
 
     componentWillReceiveProps(nextProps) {
+        this.setState({
+            referredBy : nextProps.location.pathname.split('/')[1]
+        });
         this._renderProject(nextProps.projects);
     }
 
@@ -25,14 +30,35 @@ class ProjectItem extends Component {
             setTimeout(
                 () =>
                     Animated.spring(this.state.animate, { toValue: 1 }).start(),
-                375
+                575
             );
         }
     }
 
     render() {
-        const { project: { title, body, id } } = this.state;
+        const {
+            project: {
+                title,
+                body,
+                image,
+                imageTitle,
+                imageAlt,
+                nextProject,
+                prevProject
+                },
+            referredBy } = this.state;
+
         const goBackStyle = {
+            transform: Animated.template`
+                translate3d(0, ${this.state.animate.interpolate({
+                inputRange: [0, 1],
+                outputRange: ["-14px", "0px"]
+            })},0)
+            `,
+            opacity: Animated.template`${this.state.animate}`
+        };
+
+        const prevStyle = {
             transform: Animated.template`
                 translate3d(${this.state.animate.interpolate({
                 inputRange: [0, 1],
@@ -42,35 +68,89 @@ class ProjectItem extends Component {
             opacity: Animated.template`${this.state.animate}`
         };
 
+        const nextStyle = {
+            transform: Animated.template`
+                translate3d(${this.state.animate.interpolate({
+                inputRange: [0, 1],
+                outputRange: ["24px", "0px"]
+            })},0,0)
+            `,
+            opacity: Animated.template`${this.state.animate}`
+        };
+
         return (
             <div className="page project-item">
-                <Animated.span style={goBackStyle} className="goBack">
-                    <a
-                        onClick={e => {
-                            e.preventDefault();
-                            this.props.history.goBack();
-                        }}
-                    >
+                <Animated.span style={goBackStyle} className="inlineNav goBack backLink">
+                    <Link to={`/${referredBy}`} title={`back to ${referredBy}`}>
                         &#x2191;
-                    </a>
-                </Animated.span>
-                <h1>{title}</h1>
-                <p>{body}</p>
-
-
-                <Animated.span style={goBackStyle} className="goBack inlineNav">
-                    <Link to ={`/projects/${id-1}`} >
-                        &#x27F5;
                     </Link>
-                </Animated.span>
-                <Animated.span style={goBackStyle} className=" goBack inlineNav">
-                    <Link to ={`/projects/${id+1}`} >
-                        &#x27F6;
-                    </Link>
+
                 </Animated.span>
 
+                <nav className="inlineNav">
+                    { prevProject ?
+                        <Animated.span style={prevStyle} className="goBack inlineNav prevLink">
+                            <Link to={`/${referredBy}/${prevProject}`} title="previous project">
+                                &#x27F5;
+                            </Link>
+                        </Animated.span>
+                        :""
+                    }
+                    { nextProject ?
+                         <Animated.span style={nextStyle} className="goBack inlineNav nextLink">
+                            <Link to={`/${referredBy}/${nextProject}`} title="next project">
+                                &#x27F6;
+                            </Link>
+                        </Animated.span>
+                        :""
+                    }
+                </nav>
 
+                <header>
+                    <h1>{title}</h1>
+                    <p>{body}...</p>
+                </header>
+
+                <section className="content">
+                    <div className="left column">
+                        <dl>
+                            <dt>Tech: </dt>
+                            <dd>YII 2, CSS, jQuery, modular design</dd>
+
+                            <dt>Demo:</dt>
+                            <dd>
+                                <Link
+                                    to={`http://ec2-52-87-238-76.compute-1.amazonaws.com/mobile`}
+                                    target="_blank"
+                                    >
+                                    {`Demo Title`}
+                                </Link>
+                                <Link
+                                    to={`http://www.appsimulator.net/webapp/?frame=apple_iphone_6_v&link=http%3A%2F%2Fec2-52-87-238-76.compute-1.amazonaws.com%2Fmobile`}
+                                    target="_blank"
+                                    >
+                                    {`Open in simulator`}
+                                </Link>
+                            </dd>
+                            <dt>Github:</dt>
+                            <dd>
+                                <Link
+                                    to={`https://github.com/niennte/isk2/blob/master/frontend/controllers/PromoController.php`}
+                                    target="_blank"
+                                    >
+                                    {`Controllers`}
+                                </Link>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div className="right column">
+                        <img src={image} title={imageTitle} alt={imageAlt} />
+                    </div>
+                </section>
             </div>
+
+
         );
     }
 }

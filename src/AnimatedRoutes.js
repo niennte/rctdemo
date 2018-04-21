@@ -71,10 +71,16 @@ class AnimatedRoutes extends Component {
         const locationName = this.props.location.pathname;
         let pageName = locationName.replace(/[\d./]/g, '');
         const isProjectItem = locationName.split('/')[2];
+
+        document.body.className = "";
+
         if (isProjectItem) {
             pageName += ` projectItem projectItem-${isProjectItem}`;
+            document.body.classList.add("projectItem");
+            document.body.classList.add(`projectItem-${isProjectItem}`);
+        } else {
+            document.body.classList.add(pageName? pageName : 'home');
         }
-
         return (
             <TransitionGroup component="main" className={pageName}>
                 <Transition

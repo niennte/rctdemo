@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import AnimatedRoutes from "./AnimatedRoutes";
-
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
@@ -11,20 +10,6 @@ import Contact from './Contact';
 import projectData from './projectData.js';
 
 
-/*
-TODO
-- refactor TopBar into a component
-- expect faves to be received as props
-    if none provided, don't render the Faves link
-    if provided, configure link to reflect change
-- add "fave" button to the ProjectItem
-    make a handler here, bind it, and pass it to ProjectItem
-    have ProjectItem call it when "fave" button is clicked
-- need a method to iterate through projects and and update their status as faved
-    keep track of the state in the app (or in topBar?)
-    ? either feed faves into Projects via props, or mark projects up as faved
-- feed faves into Projects via props, make a handler to un-fave, bind, pass to Projects via props
- */
 
 class App extends Component {
 
@@ -32,58 +17,131 @@ class App extends Component {
         super(props);
         this.state = {
             projects: projectData,
-            faves: {faveList:[1,3,7]}
+            faves: {faveList:[]}
+        }
+
+        this.addToFaveList = this.addToFaveList.bind(this);
+        this.removeFromFaveList = this.removeFromFaveList.bind(this);
+        this.reloadFaveList = this.reloadFaveList.bind(this);
+
+    }
+
+    addToFaveList(projectId) {
+        this.setState((prevState) => {
+
+                prevState.faves.faveList.push(parseInt(projectId, 10));
+                console.log(prevState.faves.faveList);
+                return {
+                    faves: {faveList: prevState.faves.faveList}
+                };
+            }
+        );
+    }
+
+    removeFromFaveList(projectId) {
+        this.setState((prevState) => {
+            return {
+                faves: {
+                    faveList: prevState.faves.faveList.filter(
+                            id => parseInt(id, 10) !== parseInt(projectId, 10)
+                    )}
+            };
+        });
+    }
+
+    reloadFaveList(faves) {
+        let faveList = Array.from(faves.faveList);
+
+        if (Array.isArray(faveList)) {
+            this.setState({
+                faves: {
+                    faveList: faveList.map( (f) => parseInt(f) )}
+            });
         }
     }
 
     render() {
 
+        let navLink = "";
+        if (this.state.faves.faveList && this.state.faves.faveList.length) {
+            for (let i = 0; i < this.state.faves.faveList.length; i++) {
+                navLink += "&hearts;";
+            }
+        }
+
         return (
             <div className="App wrapper">
                 <div className="topBar">
-                        <NavLink exact to="/">Home</NavLink>
-                        <NavLink to="/about">About</NavLink>
-                        <NavLink to="/projects">Projects</NavLink>
-                        <NavLink to="/contact">Contact</NavLink>
-                        <NavLink to={`/faves/${JSON.stringify(this.state.faves)}`} style={{marginLeft: "auto"}}>Faves</NavLink>
+                    <NavLink className="homeLink" exact to="/">Home</NavLink>
+                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/projects">Projects</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
+
+                    {
+                        this.state.faves.faveList && this.state.faves.faveList.length ?
+                            <span className="faveNav">
+                                <NavLink className="faveLink" to="/faves">
+                                    <span dangerouslySetInnerHTML={{__html: navLink }}></span>
+                                </NavLink>
+                                <button className="shareFaveLink">
+                                    <svg x="0px" y="0px" viewBox="0 0 473.932 473.932" width="17" height="17" fill="currentcolor">
+                                        <path d="M385.513,301.214c-27.438,0-51.64,13.072-67.452,33.09l-146.66-75.002
+                c1.92-7.161,3.3-14.56,3.3-22.347c0-8.477-1.639-16.458-3.926-24.224l146.013-74.656c15.725,20.924,40.553,34.6,68.746,34.6
+                c47.758,0,86.391-38.633,86.391-86.348C471.926,38.655,433.292,0,385.535,0c-47.65,0-86.326,38.655-86.326,86.326
+                c0,7.809,1.381,15.229,3.322,22.412L155.892,183.74c-15.833-20.039-40.079-33.154-67.56-33.154
+                c-47.715,0-86.326,38.676-86.326,86.369s38.612,86.348,86.326,86.348c28.236,0,53.043-13.719,68.832-34.664l145.948,74.656
+                c-2.287,7.744-3.947,15.79-3.947,24.289c0,47.693,38.676,86.348,86.326,86.348c47.758,0,86.391-38.655,86.391-86.348
+                C471.904,339.848,433.271,301.214,385.513,301.214z"></path>
+                                    </svg>
+                                    </button>
+                            </span>
+                                :
+                            ""
+                    }
                 </div>
 
-
                 <AnimatedRoutes>
+
                     <Route
                         exact
-                        strict
                         path="/projects"
                         render={ (props) => (
-                    <Projects
-                        projects={this.state.projects} />
-                )}
-                        />
-
+                            <Projects
+                                {...props}
+                                onAdd={this.addToFaveList}
+                                onRemove={this.removeFromFaveList}
+                                projects={this.state.projects}
+                                faves={this.state.faves} />
+                        )} />
 
                     <Route
                         exact
-                        strict
                         path="/projects/:id"
                         render={ (props) => (
-                    <ProjectItem
-                        {...props}
-                        projects={this.state.projects} />
-                )}
-                        />
-
+                            <ProjectItem
+                                {...props}
+                                projects={this.state.projects} />
+                        )} />
 
                     <Route
-                        path="/faves/:faveList"
+                        exact
+                        path="/faves"
                         render={ (props) => (
-                    <Faves
-                        {...props}
-                        faves={this.state.faves}
-                        projects={this.state.projects} />
-                )}
-                        />
+                            <Faves
+                                {...props}
+                                faves={this.state.faves}
+                                projects={this.state.projects}
+                                onUpdate={this.reloadFaveList} />
+                        )} />
 
-
+                    <Route
+                        path="/faves/:id"
+                        render={ (props) => (
+                            <ProjectItem
+                                {...props}
+                                faves={this.state.faves}
+                                projects={this.state.projects} />
+                        )} />
 
                     <Route
                         path="/about" component={About}
@@ -92,7 +150,11 @@ class App extends Component {
                     <Route
                         path="/contact" component={Contact}
                         />
-                    <Route exact path="/" component={Home}/>
+
+                    <Route
+                        path="/"
+                        component={Home}/>
+
                 </AnimatedRoutes>
             </div>
         );

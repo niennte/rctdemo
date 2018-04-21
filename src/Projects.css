@@ -1,0 +1,75 @@
+
+/* align uneven content at the bottom */
+.page.projects section {
+    justify-content: center;
+}
+
+.page h1 {
+    margin: 0 auto;
+}
+
+.project-grid-item {
+    background: #fff no-repeat center center;
+    background-size: contain;
+    background-position-y: 40px;
+
+    /*border-radius: 0 7px 0 0;
+    box-shadow: 5px 10px 15px #888888;*/
+    width: 100%;
+    min-width: 350px;
+    max-width: 500px;
+    height: 350px;
+}
+
+.page section div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    padding: 0 2rem 0 1rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: left;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.project-grid-item .faveButton {
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    border: 0;
+    font-size: 150%;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.project-grid-item .faveButton.isFavedButton {
+    color: red;
+}
+
+.project-grid-item .faveButton.isNotFavedButton {
+    color: #888;
+}
+
+.project-grid-item .faveButton:hover {
+    font-size: 180%;
+    right: -8px;
+    top: -6px;
+}
+
+.project-grid-item .faveButton:focus {
+    outline:none;
+}

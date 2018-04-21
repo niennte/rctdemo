@@ -1,16 +1,81 @@
+/*
+.topBar a.homeLink {
+    display: block;
+    position: relative;
+    width: 111px;
+    height: 150px;
+    background: url(/img/card-dev.png) center center no-repeat;
+    top: 40px;
+    left: -42px;
+    margin-right: -30px;
+    color: transparent;
+    -webkit-transition: all 0.8s 0s;
+    -o-transition: all 0.07s 0s;
+    transition: background 0.8s 0s;
+    transform: rotate(0deg);
+
+}
+*/
+
+/*.topBar a.faveLink,
+.topBar .shareFaveLink {*/
+.topBar .faveNav {
+    margin-left: auto;
+}
+.shareFaveLink {
+    background: transparent;
+    border: 0;
+    position: relative;
+    top:2px;
+}
+
+.shareFaveLink:focus {
+    outline: 0;
+}
+
+
+.topBar a.homeLink:hover {
+    /*background-image: url(/img/card.png)*/
+    /*transform: rotate(3deg);*/
+    /* background-size: contain;
+    background-image: url(/img/jolly-roger.png); */
+    /*background-image: url(/img/card-clean.png);*/
+}
+
+/*
+.page {
+    padding: calc(162px + 3rem) 3rem 3rem 3rem;
+}
+*/
+
+
 main {
     -webkit-transition: background 2s; /* Safari */
     transition: background 2s;
  }
+
+
 main.contact {
     background: PaleVioletRed;
 }
+
 main.about {
     background: DarkSalmon;
 }
+
+
+
+
+
 main.projects {
-    background: SteelBlue;
+
 }
+
+main.projects.projectItem {
+    background: #303030;
+}
+
+
 main.projects.projectItem {
     background: #303030;
 }
@@ -21,4 +86,25 @@ main.projects.projectItem.projectItem-6,
 main.projects.projectItem.projectItem-8
 {
     background: Lavender;
+}
+
+html, body, #root, .wrapper,
+body.projects,
+body.projects #root,
+body.projects #root .topBar {
+    color: #222;
+}
+
+body .topBar a {
+    color: inherit;
+}
+
+
+.page.projects h1, .page h1 {
+    margin: 25px auto;
+    color: inherit;
+}
+
+.page p {
+    margin: 0 auto;
 }
