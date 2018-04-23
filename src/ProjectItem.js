@@ -9,24 +9,30 @@ class ProjectItem extends Component {
         super(props);
         this.state = {
             project: {},
+            isFaved: false,
             animate: new Animated.Value(0),
             referredBy: "projects" // default
         };
+
+        this.addToFaveList = this.addToFaveList.bind(this);
+        this.removeFromFaveList = this.removeFromFaveList.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({
             referredBy : nextProps.location.pathname.split('/')[1]
         });
-        this._renderProject(nextProps.projects);
+        this._renderProject(nextProps.projects, nextProps.faves);
     }
 
-    _renderProject(projects) {
+    _renderProject(projects, faves) {
         let project = projects.filter(p => {
             return (parseInt(p.id, 10) === parseInt(this.props.match.params.id, 10));
         });
         if (project.length) {
             this.setState({ project: project[0] });
+            //p.isFaved = faves.faveList.indexOf(p.id) > -1;
+            this.setState({ isFaved: faves.faveList.indexOf(this.state.project.id) > -1});
             setTimeout(
                 () =>
                     Animated.spring(this.state.animate, { toValue: 1 }).start(),
@@ -35,9 +41,20 @@ class ProjectItem extends Component {
         }
     }
 
+    addToFaveList(e) {
+        this.props.onAdd(e.target.dataset.id);
+    }
+
+    removeFromFaveList(e) {
+        this.props.onRemove(e.target.dataset.id);
+        return false;
+    }
+
+
     render() {
         const {
             project: {
+                id,
                 title,
                 body,
                 image,
@@ -47,6 +64,8 @@ class ProjectItem extends Component {
                 prevProject
                 },
             referredBy } = this.state;
+
+        const { isFaved } = this.state;
 
         const goBackStyle = {
             transform: Animated.template`
@@ -80,6 +99,7 @@ class ProjectItem extends Component {
 
         return (
             <div className="page project-item">
+
                 <Animated.span style={goBackStyle} className="inlineNav goBack backLink">
                     <Link to={`/${referredBy}`} title={`back to ${referredBy}`}>
                         &#x2191;
@@ -107,6 +127,23 @@ class ProjectItem extends Component {
                 </nav>
 
                 <header>
+                    {
+                        isFaved ?
+                            <button
+                                className="faveButton isFavedButton"
+                                title="remove from favorites"
+                                data-id={id}
+                                onClick={this.removeFromFaveList} >
+                                &hearts;
+                            </button> :
+                            <button
+                                className="faveButton isNotFavedButton"
+                                title="add to favorites"
+                                data-id={id}
+                                onClick={this.addToFaveList}>
+                                &#9825;
+                            </button>
+                    }
                     <h1>{title}</h1>
                     <p>{body}...</p>
                 </header>
@@ -120,7 +157,7 @@ class ProjectItem extends Component {
                             <dt>Demo:</dt>
                             <dd>
                                 <Link
-                                    to={`http://ec2-52-87-238-76.compute-1.amazonaws.com/mobile`}
+                                    to={`http://ec2-52-87-238-76.compute-1.amazonaws.com/product/iphone5s-claro`}
                                     target="_blank"
                                     >
                                     {`Demo Title`}

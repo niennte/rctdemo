@@ -95,7 +95,7 @@ const projectData = [
     "image": "/img/backend-mcb.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open"
-  }/*,
+  },
   {
     "id": 13,
     "title": "Entity - control- boundary, experimental",
@@ -111,7 +111,7 @@ const projectData = [
     "image": "/img/creative-animation-character.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open"
-  }*/
+  }
 ];
 
 export default projectData;

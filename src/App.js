@@ -120,7 +120,10 @@ class App extends Component {
                         render={ (props) => (
                             <ProjectItem
                                 {...props}
-                                projects={this.state.projects} />
+                                onAdd={this.addToFaveList}
+                                onRemove={this.removeFromFaveList}
+                                projects={this.state.projects}
+                                faves={this.state.faves} />
                         )} />
 
                     <Route
@@ -129,9 +132,9 @@ class App extends Component {
                         render={ (props) => (
                             <Faves
                                 {...props}
+                                onUpdate={this.reloadFaveList}
                                 faves={this.state.faves}
-                                projects={this.state.projects}
-                                onUpdate={this.reloadFaveList} />
+                                projects={this.state.projects} />
                         )} />
 
                     <Route
@@ -139,6 +142,8 @@ class App extends Component {
                         render={ (props) => (
                             <ProjectItem
                                 {...props}
+                                onAdd={this.addToFaveList}
+                                onRemove={this.removeFromFaveList}
                                 faves={this.state.faves}
                                 projects={this.state.projects} />
                         )} />

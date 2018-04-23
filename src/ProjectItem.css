@@ -1,10 +1,18 @@
 /* inline nav */
-.inlineNav {
-    display: flex;
-}
 
+nav.inlineNav {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 33%;
+}
 .inlineNav .nextLink {
     margin-left: auto;
+}
+
+
+.page.project-item .inlineNav.goBack a {
+    color: inherit;
 }
 
 .page.project-item .inlineNav.goBack a {
@@ -34,7 +42,6 @@
 .page.project-item section div a {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -42,7 +49,6 @@
     -webkit-box-direction: normal;
     -ms-flex-flow: column;
     flex-flow: column;
-    padding: 4rem;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -52,7 +58,7 @@
     /*text-align: center;
     text-decoration: none;
     */
-    color: white;
+    color: inherit;
 
     display: block;
     padding: 0.3rem;
@@ -61,44 +67,7 @@
 
 
 
-main {
-    -webkit-transition: background 2s; /* Safari */
-    -o-transition: background 2s;
-    transition: background 2s;
-}
 
-
-main.projects.projectItem.projectItem-2,
-main.projects.projectItem.projectItem-4,
-main.projects.projectItem.projectItem-6,
-main.projects.projectItem.projectItem-8
-{
-    background: Lavender;
-}
-
-body.projectItem-2, body.projectItem-2 #root, body.projectItem-2 .wrapper,
-body.projectItem-2 .page.project-item section div a,
-body.projectItem-2 .page.project-item .goBack a,
-
-body.projectItem-4, body.projectItem-4 #root, body.projectItem-4 .wrapper,
-body.projectItem-4 .page.project-item section div a,
-body.projectItem-4 .page.project-item .goBack a,
-
-body.projectItem-6, body.projectItem-6 #root, body.projectItem-6 .wrapper,
-body.projectItem-6 .page.project-item section div a,
-body.projectItem-6 .page.project-item .goBack a,
-
-
-body.projectItem-8, body.projectItem-8 #root, body.projectItem-8 .wrapper,
-body.projectItem-8 .page.project-item section div a,
-body.projectItem-8 .page.project-item .goBack a {
-    color: #222;
-}
-
-body {
-    background: #fff;
-    color: #000;
-}
 
 
 /* https://codepen.io/jamesrweb/pen/RPyEQa */

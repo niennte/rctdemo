@@ -4,13 +4,6 @@ import * as Animated from "animated/lib/targets/react-dom";
 import { TransitionGroup, Transition } from 'react-transition-group';
 import './Projects.css';
 
-/*
-
-TODO
-- save faves from props to state,
-- when rendering, mark faved projects as such (eg, with a heart)
-- add an "unfave" button (eg an x), set a call a handler from App
- */
 
 class Projects extends Component {
 

@@ -21,7 +21,7 @@
     height: 350px;
 }
 
-.page section div a {
+.page section .project-grid-item a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -42,11 +42,21 @@
     text-align: left;
     text-decoration: none;
     color: black;
+
 }
 
 
+.glassyReflection {
+    background-image: linear-gradient(189deg, rgba(230,230,230,1) 0%,rgba(234,234,234,0.5) 40%,rgba(219,219,219,0.5) 40%,rgba(255,255,255,0.5) 92%,rgba(247,247,247,0.5) 100%);
+}
 
-.project-grid-item .faveButton {
+
+.glassyReflection:hover {
+    background-image: linear-gradient(189deg, rgba(230,230,230,0.2) 0%,rgba(234,234,234,0.1) 40%,rgba(219,219,219,0.1) 40%,rgba(255,255,255,0.1) 92%,rgba(247,247,247,0.1) 100%);
+}
+
+
+.page .faveButton {
     position: absolute;
     right: -6px;
     top: -4px;
@@ -56,20 +66,47 @@
     transition: all 0.3s;
 }
 
-.project-grid-item .faveButton.isFavedButton {
+.page .faveButton.isFavedButton {
     color: red;
 }
 
-.project-grid-item .faveButton.isNotFavedButton {
+.page .faveButton.isNotFavedButton {
     color: #888;
 }
 
-.project-grid-item .faveButton:hover {
+.page .faveButton:hover {
     font-size: 180%;
     right: -8px;
     top: -6px;
+    color: red;
+    opacity: 1;
+}
+.page.project-item .faveButton {
+    right: -44px;
+    top: -65px;
+    font-size: 280%;
 }
 
-.project-grid-item .faveButton:focus {
+.page.project-item .faveButton:hover {
+    right: -47px;
+    top: -75px;
+    font-size: 350%;
+}
+
+
+.page .faveButton:focus {
     outline:none;
+}
+
+
+.project-item header {
+    position: relative;
+    flex-grow: 1;
+    margin: 10px 10px auto 10px;
+    max-width: 65%;
+}
+
+.page.project-item .faveButton {
+    color: inherit;
+    opacity: 0.5
 }
