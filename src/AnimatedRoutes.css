@@ -182,3 +182,27 @@ body .topBar a {
     display: block;
     border: 1px solid orange;*/
 }
+
+
+
+/* modal */
+
+
+.shareLinkModal.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+    top: 20px;
+    margin-right: 22px;
+    margin-top:38px;
+}
+
+@media (min-width: 576px) {
+          .shareLinkModal.modal-dialog {
+              max-width: 500px;
+              margin: 1.75rem auto;
+              margin-right: 22px;
+              margin-top:38px;
+          }
+}
