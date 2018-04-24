@@ -86,7 +86,7 @@ class Projects extends Component {
                             transform: Animated.template`
                                 translate3d(0,${this.state.animations[i].interpolate({
                                 inputRange: [0, 1],
-                                outputRange: ["12px", "0px"]
+                                outputRange: ["100px", "0px"]
                             })},0)
                             `,
                             backgroundImage: `url(${p.image})`

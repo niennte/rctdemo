@@ -9,6 +9,7 @@ import ProjectItem from './ProjectItem';
 import Contact from './Contact';
 import projectData from './projectData.js';
 
+import { Button, Popover, PopoverHeader, PopoverBody, ButtonGroup } from 'reactstrap';
 
 
 class App extends Component {
@@ -17,13 +18,26 @@ class App extends Component {
         super(props);
         this.state = {
             projects: projectData,
-            faves: {faveList:[]}
+            faves: {
+                faveList:[],
+                title: ''
+            },
+            popoverOpen: false
         }
 
         this.addToFaveList = this.addToFaveList.bind(this);
         this.removeFromFaveList = this.removeFromFaveList.bind(this);
-        this.reloadFaveList = this.reloadFaveList.bind(this);
+        this.loadCustomFaves = this.loadCustomFaves.bind(this);
 
+        this.toggle = this.toggle.bind(this);
+    }
+
+    toggle(e) {
+
+        e.preventDefault();
+        this.setState({
+            popoverOpen: !this.state.popoverOpen
+        });
     }
 
     addToFaveList(projectId) {
@@ -49,13 +63,14 @@ class App extends Component {
         });
     }
 
-    reloadFaveList(faves) {
+    loadCustomFaves(faves) {
         let faveList = Array.from(faves.faveList);
 
         if (Array.isArray(faveList)) {
             this.setState({
                 faves: {
-                    faveList: faveList.map( (f) => parseInt(f) )}
+                    faveList: faveList.map( (f) => parseInt(f) )},
+                    title: faves.title
             });
         }
     }
@@ -83,7 +98,7 @@ class App extends Component {
                                 <NavLink className="faveLink" to="/faves">
                                     <span dangerouslySetInnerHTML={{__html: navLink }}></span>
                                 </NavLink>
-                                <button className="shareFaveLink">
+                                <button className="shareFaveLink" id="Popover1" onClick={this.toggle}>
                                     <svg x="0px" y="0px" viewBox="0 0 473.932 473.932" width="17" height="17" fill="currentcolor">
                                         <path d="M385.513,301.214c-27.438,0-51.64,13.072-67.452,33.09l-146.66-75.002
                 c1.92-7.161,3.3-14.56,3.3-22.347c0-8.477-1.639-16.458-3.926-24.224l146.013-74.656c15.725,20.924,40.553,34.6,68.746,34.6
@@ -94,6 +109,18 @@ class App extends Component {
                 C471.904,339.848,433.271,301.214,385.513,301.214z"></path>
                                     </svg>
                                     </button>
+                                <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+                                    <PopoverHeader>Save faves:</PopoverHeader>
+                                    <PopoverBody>
+                                            <textarea rows="5">
+                                        {`${window.location.protocol}//${window.location.hostname}:${window.location.port}/faves?${JSON.stringify(this.state.faves)}`}
+                                                </textarea>
+                                    </PopoverBody>
+
+                                        <Button outline color="info">Copy</Button>
+                                        <Button outline color="info">Bookmark</Button>
+
+                                </Popover>
                             </span>
                                 :
                             ""
@@ -132,7 +159,7 @@ class App extends Component {
                         render={ (props) => (
                             <Faves
                                 {...props}
-                                onUpdate={this.reloadFaveList}
+                                onUpdate={this.loadCustomFaves}
                                 faves={this.state.faves}
                                 projects={this.state.projects} />
                         )} />

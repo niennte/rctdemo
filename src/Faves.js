@@ -13,7 +13,8 @@ class Faves extends Component {
             projects: [],
             faves: [],
             animations: [],
-            msg: "No favorites yet. Please click some hearts "
+            msg: "No favorites yet. Please click some hearts ",
+            title: "Faved Projects" // default
         };
     }
 
@@ -23,6 +24,11 @@ class Faves extends Component {
             try {
                 const faveListParam = JSON.parse(decodeURI(search));
                 this.props.onUpdate(faveListParam);
+                if (faveListParam.title) {
+                    this.setState({
+                        title: faveListParam.title
+                    });
+                }
             } catch(e) {
                 console.log(e);
                 this.setState({
@@ -48,7 +54,10 @@ class Faves extends Component {
             return {
                 faves: nextProps.faves.faveList && nextProps.faves.faveList.length ?
                     nextProps.faves.faveList :
-                    prevState.faves
+                    prevState.faves,
+                title: nextProps.faves.title ?
+                    nextProps.faves.title :
+                    prevState.title,
             };
         });
 
@@ -93,7 +102,7 @@ class Faves extends Component {
         return (
             <div className="page projects">
 
-                <h1>Faved Projects</h1>
+                <h1>{this.state.title}</h1>
 
                 {!this.state.projects.length ?
                     <section>
