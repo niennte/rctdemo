@@ -9,7 +9,8 @@ import ProjectItem from './ProjectItem';
 import Contact from './Contact';
 import projectData from './projectData.js';
 
-import { Button, Popover, PopoverHeader, PopoverBody, ButtonGroup } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 
 class App extends Component {
@@ -22,7 +23,9 @@ class App extends Component {
                 faveList:[],
                 title: ''
             },
-            popoverOpen: false
+            modal: false,
+            copiedValue: '',
+            copied: false
         }
 
         this.addToFaveList = this.addToFaveList.bind(this);
@@ -32,11 +35,9 @@ class App extends Component {
         this.toggle = this.toggle.bind(this);
     }
 
-    toggle(e) {
-
-        e.preventDefault();
+    toggle() {
         this.setState({
-            popoverOpen: !this.state.popoverOpen
+            modal: !this.state.modal
         });
     }
 
@@ -84,6 +85,9 @@ class App extends Component {
             }
         }
 
+
+        let favesURL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}/faves?${JSON.stringify(this.state.faves)}`;
+
         return (
             <div className="App wrapper">
                 <div className="topBar">
@@ -98,7 +102,7 @@ class App extends Component {
                                 <NavLink className="faveLink" to="/faves">
                                     <span dangerouslySetInnerHTML={{__html: navLink }}></span>
                                 </NavLink>
-                                <button className="shareFaveLink" id="Popover1" onClick={this.toggle}>
+                                <button className="shareFaveLink" onClick={this.toggle}>
                                     <svg x="0px" y="0px" viewBox="0 0 473.932 473.932" width="17" height="17" fill="currentcolor">
                                         <path d="M385.513,301.214c-27.438,0-51.64,13.072-67.452,33.09l-146.66-75.002
                 c1.92-7.161,3.3-14.56,3.3-22.347c0-8.477-1.639-16.458-3.926-24.224l146.013-74.656c15.725,20.924,40.553,34.6,68.746,34.6
@@ -108,19 +112,32 @@ class App extends Component {
                 c-2.287,7.744-3.947,15.79-3.947,24.289c0,47.693,38.676,86.348,86.326,86.348c47.758,0,86.391-38.655,86.391-86.348
                 C471.904,339.848,433.271,301.214,385.513,301.214z"></path>
                                     </svg>
-                                    </button>
-                                <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-                                    <PopoverHeader>Save faves:</PopoverHeader>
-                                    <PopoverBody>
-                                            <textarea rows="5">
-                                        {`${window.location.protocol}//${window.location.hostname}:${window.location.port}/faves?${JSON.stringify(this.state.faves)}`}
-                                                </textarea>
-                                    </PopoverBody>
+                                </button>
+                                <Modal
+                                    isOpen={this.state.modal}
+                                    toggle={this.toggle}
+                                    onClosed={() => this.setState({copied: false})}
+                                    className="shareLinkModal">
+                                    <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                                    <ModalBody>
+                                        <textarea
+                                            rows="3"
+                                            style={{width: "100%", textAlign: "center"}}
+                                            defaultValue={favesURL} >
+                                        </textarea>
+                                    </ModalBody>
+                                    <ModalFooter>
+                                        <CopyToClipboard
+                                            text={favesURL}
+                                            onCopy={() => this.setState({copied: true})}>
+                                            <Button color="primary" >Copy Link</Button>
+                                        </CopyToClipboard>
 
-                                        <Button outline color="info">Copy</Button>
-                                        <Button outline color="info">Bookmark</Button>
+                                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
 
-                                </Popover>
+                                        {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
+                                    </ModalFooter>
+                                </Modal>
                             </span>
                                 :
                             ""
