@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import * as Animated from "animated/lib/targets/react-dom";
 import { TransitionGroup, Transition } from 'react-transition-group';
-import './Projects.css';
+//import './Projects.css';
 
 
 class Faves extends Component {

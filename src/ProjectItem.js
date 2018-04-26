@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as Animated from "animated/lib/targets/react-dom";
 import { Link } from "react-router-dom";
-import "./ProjectItem.css";
+//import "./ProjectItem.css";
 
 class ProjectItem extends Component {
 
