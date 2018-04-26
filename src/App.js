@@ -11,7 +11,30 @@ import projectData from './projectData.js';
 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import {
+    FacebookShareButton,
+    FacebookShareCount,
+    FacebookIcon,
 
+    GooglePlusShareButton,
+    GooglePlusShareCount,
+    GooglePlusIcon,
+
+    LinkedinShareButton,
+    LinkedinCount,
+    LinkedinIcon,
+
+    TelegramShareButton,
+    TelegramCount,
+    TelegramIcon,
+
+    WhatsappShareButton,
+    WhatsappCount,
+    WhatsappIcon,
+
+    EmailShareButton,
+    EmailIcon
+} from 'react-share';
 
 class App extends Component {
 
@@ -21,12 +44,12 @@ class App extends Component {
             projects: projectData,
             faves: {
                 faveList:[],
-                title: ''
+                title: "Some cool projects from Irin's portfolio: "
             },
             modal: false,
             copiedValue: '',
             copied: false
-        }
+        };
 
         this.addToFaveList = this.addToFaveList.bind(this);
         this.removeFromFaveList = this.removeFromFaveList.bind(this);
@@ -87,6 +110,7 @@ class App extends Component {
 
 
         let favesURL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}/faves?${JSON.stringify(this.state.faves)}`;
+        let favesTitle = this.state.title;
 
         return (
             <div className="App wrapper">
@@ -117,21 +141,57 @@ class App extends Component {
                                     isOpen={this.state.modal}
                                     toggle={this.toggle}
                                     onClosed={() => this.setState({copied: false})}
-                                    className="shareLinkModal">
-                                    <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                                    className="shareLinkModal"
+                                    style={{
+                                        textAlign: "center"
+                                    }}>
+                                    <ModalHeader toggle={this.toggle}>
+                                        Save your faves for posterity:<br/>
+                                        <small>...or write down on a piece of paper: I have no idea what they are, because I respect your privacy and won't nag you for username, password, contacts, and I won't collect you IP address, fingerprints, DNA samples, and eye iris retina.</small>
+                                    </ModalHeader>
                                     <ModalBody>
                                         <textarea
-                                            rows="3"
+                                            rows="2"
                                             style={{width: "100%", textAlign: "center"}}
                                             defaultValue={favesURL} >
                                         </textarea>
+
+                                        <div className="socialShare" style={{
+                                        display: "flex",
+                                        justifyContent: "center"
+                                        }}>
+                                            <FacebookShareButton url={favesURL} title={favesTitle}>
+                                                <FacebookIcon/>
+                                            </FacebookShareButton>
+                                            <GooglePlusShareButton url={favesURL} title={favesTitle}>
+                                                <GooglePlusIcon/>
+                                            </GooglePlusShareButton>
+                                            <LinkedinShareButton url={favesURL} title={favesTitle}>
+                                                <LinkedinIcon/>
+                                            </LinkedinShareButton>
+                                            <WhatsappShareButton url={favesURL} title={favesTitle}>
+                                                <WhatsappIcon/>
+                                            </WhatsappShareButton>
+                                            <TelegramShareButton url={favesURL} title={favesTitle}>
+                                                <TelegramIcon/>
+                                            </TelegramShareButton>
+                                            <EmailShareButton url={favesURL} title={favesTitle}>
+                                                <EmailIcon/>
+                                            </EmailShareButton>
+                                        </div>
                                     </ModalBody>
-                                    <ModalFooter>
+                                    <ModalFooter style={{
+                                        display: "flex",
+                                        justifyContent: "center"
+                                        }}>
+
                                         <CopyToClipboard
                                             text={favesURL}
                                             onCopy={() => this.setState({copied: true})}>
                                             <Button color="primary" >Copy Link</Button>
                                         </CopyToClipboard>
+
+
 
                                         <Button color="secondary" onClick={this.toggle}>Cancel</Button>
 
