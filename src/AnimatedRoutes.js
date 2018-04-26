@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import { withRouter, Switch } from 'react-router-dom';
 import * as Animated from 'animated/lib/targets/react-dom';
 import { TransitionGroup, Transition } from 'react-transition-group';
-//import './AnimatedRoutes.css';
 
 class AnimatedRoutes extends Component {
     static propTypes = {
         location: PropTypes.shape({
-            pathname: PropTypes.string.isRequired,
+            pathname: PropTypes.string.isRequired
         }).isRequired,
-        children: PropTypes.node.isRequired,
+        children: PropTypes.node.isRequired
     };
 
     constructor(props) {
@@ -20,7 +19,6 @@ class AnimatedRoutes extends Component {
             location: props.location
         };
 
-        // handleEnter = () => {...} would do the same thing, with no biding:
         this.handleEnter = this.handleEnter.bind(this);
         this.handleExit = this.handleExit.bind(this);
     }
@@ -36,7 +34,7 @@ class AnimatedRoutes extends Component {
 
         setTimeout(() => {
             this.setState({
-                location: this.props.location,
+                location: this.props.location
             });
         }, 200);
     }
@@ -58,13 +56,13 @@ class AnimatedRoutes extends Component {
         const interpolation = (
             animate.interpolate({
                 inputRange: [0, 1],
-                outputRange: ['12px', '0px'],
+                outputRange: ['12px', '0px']
             })
         );
 
         const style = {
             opacity: Animated.template`${animate}`,
-            transform: Animated.template`translate3d(0, ${interpolation}, 0)`,
+            transform: Animated.template`translate3d(0, ${interpolation}, 0)`
         };
 
 

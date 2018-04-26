@@ -42,7 +42,6 @@ class Projects extends Component {
             {
                 // calculate previous and next ids
                 projects: projects.map((p, i, ps) => {
-                    console.log(faves);
                     p.nextProject = ps[i+1] ? ps[i+1].id : false;
                     p.prevProject = ps[i-1] ? ps[i-1].id : false;
                     p.isFaved = faves.faveList.indexOf(p.id) > -1;

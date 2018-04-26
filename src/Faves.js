@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import * as Animated from "animated/lib/targets/react-dom";
 import { TransitionGroup, Transition } from 'react-transition-group';
-//import './Projects.css';
 
 
 class Faves extends Component {
@@ -57,7 +56,7 @@ class Faves extends Component {
                     prevState.faves,
                 title: nextProps.faves.title ?
                     nextProps.faves.title :
-                    prevState.title,
+                    prevState.title
             };
         });
 
@@ -68,7 +67,7 @@ class Faves extends Component {
 
     _renderProjects(projects) {
 
-        const projectsToRender = projects.filter(function(p, i, ps) {
+        const projectsToRender = projects.filter(function(p) {
                 return this.indexOf(p.id) > -1;
             },
             this.state.faves
