@@ -40,11 +40,11 @@ main {
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 
     &.contact {
-        background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+        /*background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);*/
     }
 
     &.about {
-        background: DarkSalmon;
+        /* background: DarkSalmon;*/
     }
 
     &.projects {
@@ -361,6 +361,17 @@ main {
             a {
                 color: white;
                 text-decoration: none;
+            }
+        }
+
+        .column ul {
+            padding-left: 0;
+            li {
+
+                display: inline;
+                list-style: none;
+                padding: 0 10px 0 0;
+                margin: 0;
             }
         }
 

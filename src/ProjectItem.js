@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import * as Animated from "animated/lib/targets/react-dom";
 import { Link } from "react-router-dom";
+import ProjectItemLinks from './ProjectItemLinks';
+import ProjectItemImages from './ProjectItemImages';
 
 class ProjectItem extends Component {
 
@@ -51,6 +53,7 @@ class ProjectItem extends Component {
 
 
     render() {
+
         const {
             project: {
                 id,
@@ -149,40 +152,12 @@ class ProjectItem extends Component {
 
                 <section className="content">
                     <div className="left column">
-                        <dl>
-                            <dt>Tech: </dt>
-                            <dd>YII 2, CSS, jQuery, modular design</dd>
-
-                            <dt>Demo:</dt>
-                            <dd>
-                                <Link
-                                    to={`http://ec2-52-87-238-76.compute-1.amazonaws.com/product/iphone5s-claro`}
-                                    target="_blank"
-                                    >
-                                    {`Demo Title`}
-                                </Link>
-                                <Link
-                                    to={`http://www.appsimulator.net/webapp/?frame=apple_iphone_6_v&link=http%3A%2F%2Fec2-52-87-238-76.compute-1.amazonaws.com%2Fmobile`}
-                                    target="_blank"
-                                    >
-                                    {`Open in simulator`}
-                                </Link>
-                            </dd>
-                            <dt>Github:</dt>
-                            <dd>
-                                <Link
-                                    to={`https://github.com/niennte/isk2/blob/master/frontend/controllers/PromoController.php`}
-                                    target="_blank"
-                                    >
-                                    {`Controllers`}
-                                </Link>
-                            </dd>
-                        </dl>
+                        <ProjectItemLinks project={this.state.project} />
                     </div>
 
-                    <div className="right column">
-                        <img src={image} title={imageTitle} alt={imageAlt} />
-                    </div>
+
+                        <ProjectItemImages project={this.state.project} />
+
                 </section>
             </div>
 

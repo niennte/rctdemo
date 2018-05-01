@@ -4,6 +4,8 @@ import { withRouter, Switch } from 'react-router-dom';
 import * as Animated from 'animated/lib/targets/react-dom';
 import { TransitionGroup, Transition } from 'react-transition-group';
 
+import './AnimatedRoutes.css';
+
 class AnimatedRoutes extends Component {
     static propTypes = {
         location: PropTypes.shape({

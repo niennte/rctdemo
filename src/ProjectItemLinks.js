@@ -44,25 +44,11 @@ class ProjectItemLinks extends Component {
         return(
             <dl>
 
-                <dt>Kind: </dt>
-                <dd>
-                    <ul>
-                        {kind && kind.length ?
 
-                            kind.map((item, i) => {
-                                return(
-                                    <li>{item}</li>
-                                )
-                            }) : ""
-                        }
-                    </ul>
-                </dd>
-
-                <dt>Tech: </dt>
+                <dt>Stack: </dt>
                 <dd>
                     <ul>
                         {tech && tech.length ?
-
                             tech.map((item, i) => {
                                 return(
                                     <li>{item}</li>

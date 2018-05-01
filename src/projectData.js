@@ -500,7 +500,7 @@ const projectData = [
     "id": 15,
     "title": "Entity - control- boundary, experimental",
     "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "image": "/img/placeholder.jpg",
+    "image": "/img/placeholder-2.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open"
   }/*,
