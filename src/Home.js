@@ -1,14 +1,59 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Home = () => (
   <div className="page">
-    <h1>Irin Potapova</h1>
-    <p>I am a full stack web engineer based in Toronto, Canada.</p>
-    <p>I work with clients building holistic APIs and I apply information architecture potions to craft elegant solutions in both front end and back end.</p>
-    <p>Also, I meditate, compose and record music, sail, paraglide, kitesurf, and for rest of the time, keep myself fit by opening doors for the two cats who own me.</p>
+
+    <h3 className="statement">I build </h3>
+    <h3 className="illustration">
+      <Link className="frontends"
+            to='/faves?{"faveList":[2,4,5,6,8],"title":"Some frontend projects from my portfolio: "}'
+            title='Some frontend projects from my portfolio' >
+
+        <svg version="1.1" id="Layer_2" x="0px" y="0px"
+             width="150px" height="250px" viewBox="0 0 150 250" enableBackground="new 0 0 150 250">
+          <path id="frontEndCat" />
+        </svg>
+
+        <span className="text">frontends</span>
+
+      </Link>
+
+      &nbsp; and &nbsp;
+
+      <Link
+          className="backends"
+          to='/faves?{"faveList":[3,11,12],"title":"Some backend projects from my portfolio: "}'
+          title='Some backend projects from my portfolio' >
+
+        <svg
+            version="1.1"
+            id="Layer_1"
+            x="0px"
+            y="0px"
+            width="150px"
+            height="300px"
+            viewBox="0 0 150 300"
+            enableBackground="new 0 0 150 300" >
+
+          <path id="backEndCat"  />
+        </svg>
+        <span className="text">backends</span>
+      </Link>
+
+      .</h3>
+
+    <h2 className="tagLine">I am a
+      &nbsp;
+      <Link className="someFunWithHover" to='/projects' title=''>
+        <span className="twoCat">two-cat</span>
+        &nbsp;
+        <span className="fullStack">full-stack</span>
+      </Link>
+      &nbsp;
+      web developer.
+    </h2>
   </div>
 );
-
-Home.displayName = 'Home';
 
 export default Home;

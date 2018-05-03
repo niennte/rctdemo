@@ -1,20 +1,59 @@
-import React from 'react';
+import React, { Component } from "react";
 
-const Contact = () => (
-  <div className="page">
-    <h1>Contact</h1>
-    <p>Hello from Contact!</p>
 
-    <form action="https://formspree.io/irina-portfolioform@usa.net"
-          method="POST">
-      <input type="text" name="name" placeholder="Your name" />
-      <input type="email" name="_replyto" placeholder="Your email address" />
-      <textarea name="message" placeholder="Please type your message here" />
-      <input type="submit" value="Send" />
-    </form>
-  </div>
-);
+class Contact extends Component {
 
-Contact.displayName = 'Contact';
+    render() {
+
+        return (
+            <div className="page">
+                <h1>Contact me</h1>
+
+                <form
+                    className="contactForm"
+                    action="https://formspree.io/irina-portfolioform@usa.net"
+                    method="POST">
+
+                    <div className="fieldSet">
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your name"
+                            minLength="2"
+                            required />
+                        <input
+                            type="email"
+                            name="_replyto"
+                            placeholder="Your email address"
+                            required/>
+                    </div>
+
+                    <textarea
+                        name="message"
+                        rows="3"
+                        placeholder="Please type your message here, and click on the little bird to send"
+                        required />
+
+                    <button className="send" type="submit">
+
+                        <svg
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 250 250"
+                            enableBackground="new 0 0 250 250">
+                            <path id="littleBird"/>
+                            <g>
+                              <path id="littleBirdsMessage"/>
+                            </g>
+                        </svg>
+
+                    </button>
+
+                </form>
+            </div>
+        );
+  }
+
+}
 
 export default Contact;

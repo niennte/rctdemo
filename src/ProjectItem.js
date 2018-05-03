@@ -106,8 +106,25 @@ class ProjectItem extends Component {
                     <Link to={`/${referredBy}`} title={`back to ${referredBy}`}>
                         &#x2191;
                     </Link>
-
                 </Animated.span>
+
+                {
+                    isFaved ?
+                        <button
+                            className="faveButton isFavedButton"
+                            title="remove from favorites"
+                            data-id={id}
+                            onClick={this.removeFromFaveList} >
+                            &hearts;
+                        </button> :
+                        <button
+                            className="faveButton isNotFavedButton"
+                            title="add to favorites"
+                            data-id={id}
+                            onClick={this.addToFaveList}>
+                            &#9825;
+                        </button>
+                }
 
                 <nav className="inlineNav">
                     { prevProject ?
@@ -129,23 +146,6 @@ class ProjectItem extends Component {
                 </nav>
 
                 <header>
-                    {
-                        isFaved ?
-                            <button
-                                className="faveButton isFavedButton"
-                                title="remove from favorites"
-                                data-id={id}
-                                onClick={this.removeFromFaveList} >
-                                &hearts;
-                            </button> :
-                            <button
-                                className="faveButton isNotFavedButton"
-                                title="add to favorites"
-                                data-id={id}
-                                onClick={this.addToFaveList}>
-                                &#9825;
-                            </button>
-                    }
                     <h1>{title}</h1>
                     <p>{body}...</p>
                 </header>

@@ -19,7 +19,7 @@ class App extends Component {
             projects: projectData,
             faves: {
                 faveList:[],
-                title: "Some cool projects from Irin's portfolio: "
+                title: "Some projects from Irin's portfolio: "
             }
         };
 
@@ -73,7 +73,7 @@ class App extends Component {
         return (
             <div className="App wrapper">
                 <div className="topBar">
-                    <NavLink className="homeLink" exact to="/">Home</NavLink>
+                    <NavLink className="homeLink" exact to="/">Irin P.</NavLink>
                     <NavLink to="/about">About</NavLink>
                     <NavLink to="/projects">Projects</NavLink>
                     <NavLink to="/contact">Contact</NavLink>

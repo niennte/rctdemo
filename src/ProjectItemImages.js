@@ -34,7 +34,11 @@ class ProjectItemImages extends Component {
 
 
             <div className="right column">
-        <img src="/img/placeholder.jpg"/>
+                {posterImage ?
+                    (<img src={posterImage.src}/>) :
+                    (<img src="/img/placeholder-2.jpg"/>)
+                }
+
         <img src="/img/placeholder-2.jpg"/>
         <img src="/img/placeholder.jpg"/>
             </div>
