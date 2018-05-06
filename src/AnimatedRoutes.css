@@ -80,6 +80,10 @@ h3.illustration a svg {
     fill: #777;
 }
 
+h3.illustration a:hover svg {
+    fill: #555;
+}
+
 
 h3.illustration a #frontEndCat {
     /*fill: url(#SVGID_1_);*/
