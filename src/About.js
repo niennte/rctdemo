@@ -1,18 +1,17 @@
 import React from 'react';
 
 const About = () => (
-  <div className="page">
+  <div className="page about">
     <h1>About me</h1>
+
     <p>I am a full stack web engineer based in Toronto, Canada.</p>
 
-    <p>Suspendisse etiam a sit. Mauris id diam vel montes volutpat. Vel lacus eu eget vestibulum ac, dicta integer ipsum. Vivamus dolor sociis ligula massa aliquam, sit nec. Quis lacus elit, pede volutpat quos ultrices dis ut laoreet, porttitor donec convallis viverra augue, ipsum eget diam porttitor cupidatat integer cursus. Convallis vel, arcu in eget odio diam odio. Lacus nulla vestibulum, elit diam dictumst, non consequat aut ultrices dapibus sit, vel ultricies quae. Augue vestibulum, suspendisse rutrum at rhoncus massa scelerisque consectetuer.
-      </p>
+    <p>I work to bring together art and logic to craft elegant, robust, user centered applications, web services, and APIs. I code in JavaScript, PHP and Java. My present favorites are React, Spring Framework, AWS services, and containers. I have background in informatics and languages, and experience in frontend development, UX design, relational databases (mySQL, Postgres), and backend web applications development (PHP, Java).
+    </p>
 
-    <p>Non purus, viverra leo purus, mauris fusce imperdiet at quam malesuada quis, sit dui dolor ipsum, cras pede urna phasellus est. Aliquet porta volutpat fringilla duis magna est. Tristique laoreet, donec metus. Est eros nulla at nunc sit. Vel ipsum eu perferendis nunc sociis suspendisse, id ante, volutpat ac vivamus, sed fusce enim convallis vestibulum. Luctus sit taciti nulla, lacus tristique ligula lacus vitae, rhoncus justo et mauris.
-      </p>
+    <p>When out of computer chair, I keep myself fit by opening doors for the two cats that live with me. Also, I like to travel the world, mix with different cultures, learn languages, read, hike in wilderness, meditate, and compose music.</p>
 
-    <p>At times I meditate, compose music, sail, paraglide, kitesurf.</p>
-    <p>At other times I open doors for the two cats who live with me.</p>
+    <p>Before I die, I would like to try myself in data architecture, write a SciFi book, sky dive, and see polar bears. </p>
 
   </div>
 );

@@ -2,12 +2,17 @@
     background: #fff;
 }
 
-.page, .page.projects {
+.page {
     display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
+}
+
+.page.projects {
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .page.project-item nav.inlineNav {
@@ -73,6 +78,16 @@ h3.illustration a {
     position: relative;
 }
 
+h3.illustration a.frontends {
+    /*top: -25px;
+    left: -25px;*/
+}
+
+h3.illustration a.backends {
+    /*top: 25px;
+    left: 25px;*/
+}
+
 h3.illustration a svg {
     position: absolute;
     top: -188px;
@@ -112,9 +127,49 @@ h3.illustration a.backends svg {
     left: -20px;
 }
 
-.page .tagLine {
+.page.home .tagLine {
     margin-top: 45px;
     text-align: center;
+    font-size: 1.8rem;
+}
+
+img.www {
+
+    animation-name: globeRotation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    fill: #666;
+}
+
+@keyframes globeRotation {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+/* About */
+.page.about {
+
+}
+
+
+
+.page.about p {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    margin: 5px auto;
 }
 
 

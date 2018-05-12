@@ -1,5 +1,5 @@
 const projectData = [
-  {
+  /*{
     "id": 1,
     "title": "Application change and worfklow analysis",
     "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
@@ -39,7 +39,7 @@ const projectData = [
         "label": "Usability analysis"
       }
     ]
-  },
+  },*/
   {
     "id": 2,
     "title": "Usability analysis",
@@ -249,7 +249,7 @@ const projectData = [
       }
     ]
   },
-  {
+  /*{
     "id": 7,
     "title": "Modular frontend design - I",
     "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
@@ -289,7 +289,7 @@ const projectData = [
         "label": "Usability analysis"
       }
     ]
-  },
+  },*/
   {
     "id": 8,
     "title": "Modular frontend design - II",
@@ -331,7 +331,7 @@ const projectData = [
       }
     ]
   },
-  {
+  /*{
     "id": 9,
     "title": "Modular frontend design - III",
     "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
@@ -371,9 +371,9 @@ const projectData = [
         "label": "Usability analysis"
       }
     ]
-  },
+  },*/
 
-  {
+  /*{
     "id": 10,
     "title": "Modular frontend design - IV",
     "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",
@@ -413,7 +413,7 @@ const projectData = [
         "label": "Usability analysis"
       }
     ]
-  },
+  },*/
   {
     "id": 11,
     "title": "Integrating a web app with an distribution API platform",
@@ -496,15 +496,15 @@ const projectData = [
       }
     ]
   },
-  {
+  /*{
     "id": 15,
     "title": "Entity - control- boundary, experimental",
     "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
     "image": "/img/placeholder-2.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open"
-  }/*,
-  {
+  },*/
+  /*{
     "id": 13,
     "title": "Entity - control- boundary, experimental",
     "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",

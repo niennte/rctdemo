@@ -10,11 +10,11 @@ class Home extends Component {
         this.state = {
             frontendLink: {
                 faveList: [2,4,5,6,8],
-                title: 'Some frontend projects'
+                title: 'Frontend projects'
             },
             backendLink: {
                 faveList: [3,11,12],
-                title: 'Some backend projects'
+                title: 'Backend projects'
             },
             frontEndAnimationId: "earsUp",
             backEndAnimationId: "curlTail"
@@ -25,7 +25,7 @@ class Home extends Component {
 
         return(
 
-            <div className="page">
+            <div className="page home">
 
                 <h2 className="muted statement">I Build</h2>
                 <h3 className="muted illustration">
@@ -53,7 +53,6 @@ class Home extends Component {
                       <span className="text">Backends</span>
 
                     </Link>
-                    .
                 </h3>
 
                 <h1 className="muted tagLine">I am a
@@ -63,13 +62,11 @@ class Home extends Component {
                         to='/projects'
                         title='My portfolio projects'
                         onMouseOver={ () =>  {
-                            // SVG/SMIL animation DOM
                             document.getElementById(this.state.frontEndAnimationId).beginElement();
                             document.getElementById(this.state.backEndAnimationId).beginElement();
                           }
                         }
                         onMouseOut={ () =>  {
-                            // SVG/SMIL animation DOM
                             document.getElementById(this.state.frontEndAnimationId).endElement();
                             document.getElementById(this.state.backEndAnimationId).endElement();
                           }

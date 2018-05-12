@@ -51,7 +51,9 @@ class ProjectItemLinks extends Component {
                         {tech && tech.length ?
                             tech.map((item, i) => {
                                 return(
-                                    <li>{item}</li>
+                                    <li
+                                        key={i}
+                                        >{item}</li>
                                 )
                             }) : ""
                         }
@@ -65,6 +67,7 @@ class ProjectItemLinks extends Component {
                             demos.map((item, i) => {
                                 return(
                                     <Link
+                                        key={i}
                                         to={item.URL}
                                         target="_blank"
                                         >
@@ -83,6 +86,7 @@ class ProjectItemLinks extends Component {
                             github.map((item, i) => {
                                 return(
                                     <Link
+                                        key={i}
                                         to={item.URL}
                                         target="_blank"
                                         >
