@@ -20,8 +20,8 @@
     justify-content: space-between;
 }
 
-.page section.content,
-.page.project-item header {
+.page section.header,
+.page section.content {
     max-width: 920px;
 }
 
@@ -367,5 +367,32 @@ form.contactForm {
     }
 }
 
-/* Home page */
+
+
+
+
+/* project Item page */
+.popupbox-overlay,
+.popupbox {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+}
+
+
+.popupbox-content {
+    max-width: none !important;
+}
+
+.popupbox-wrapper,
+.popupbox-content {
+    height: 100% !important;
+}
+
+.popupbox-content img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+
 

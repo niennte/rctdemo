@@ -9,7 +9,7 @@ import ProjectItem from './ProjectItem';
 import Contact from './Contact';
 import projectData from './projectData.js';
 import FaveNav from './FaveNav.js';
-
+import { PopupboxContainer } from 'react-popupbox';
 
 class App extends Component {
 
@@ -81,6 +81,7 @@ class App extends Component {
                         this.state.faves.faveList && this.state.faves.faveList.length ?
                             <FaveNav faves={this.state.faves} /> : ""
                     }
+                    <PopupboxContainer />
                 </div>
 
                 <AnimatedRoutes>

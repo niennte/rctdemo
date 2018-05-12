@@ -196,7 +196,7 @@ main {
         width: 100%;
         padding: 0 0 6rem 0;
         margin: 0;
-        div {
+        .project-grid-item {
             display: flex;
             width: calc(100% / 4 - 2rem);
             min-height: 250px;
@@ -383,8 +383,8 @@ main {
         }
 
         .faveButton {
-            right: -44px;
-            top: -65px;
+            right: 5%;
+            top: 63px;
             font-size: 280%;
             color: inherit;
             opacity: 0.5;
@@ -394,8 +394,8 @@ main {
             }
 
             &:hover {
-                right: -47px;
-                top: -75px;
+                right: 5%;
+                top: 60px;
                 font-size: 350%;
             }
         }

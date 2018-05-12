@@ -145,10 +145,12 @@ class ProjectItem extends Component {
                     }
                 </nav>
 
+                <section className="header">
                 <header>
                     <h1>{title}</h1>
                     <p>{body}...</p>
                 </header>
+                </section>
 
                 <section className="content">
                     <div className="left column">

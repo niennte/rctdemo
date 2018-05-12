@@ -52,6 +52,24 @@ const projectData = [
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
+    "images": [
+      {
+        "src": "/img/analysis-usability-1.png",
+        "title": "Screenshot of the view with filter open",
+        "alt": "Screenshot of the view with filter open"
+      },
+      {
+        "src": "/img/placeholder-2.jpg",
+        "title": "Screenshot of the view with filter open",
+        "alt": "Screenshot of the view with filter open"
+      },
+      {
+        "src": "/img/placeholder.jpg",
+        "title": "Screenshot of the view with filter open",
+        "alt": "Screenshot of the view with filter open"
+      },
+
+    ],
     "kind": ['Relational design', 'Application architecture'],
     "tech": ['YII 2' ,'mySQL'],
     "github": [
@@ -134,7 +152,7 @@ const projectData = [
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/fullstack-entities-1x1000.png",
+      "src": "/img/fullstack-showcase-3.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
@@ -167,7 +185,7 @@ const projectData = [
       }
     ]
   },
-  {
+  { /* https://vimeo.com/52125413 */
     "id": 5,
     "title": "User experience modelling - II",
     "body": "World's shortest path to meaningful conversion (please click bottom right in the demo)",
@@ -175,7 +193,7 @@ const projectData = [
     "imageTitle": "Screenshot of the mobile view with filter open",
     "imageAlt": "Screenshot of the mobile view with filter open",
     "posterImage": {
-      "src": "/img/fullstack-entities-1.png",
+      "src": "/img/mobile-simulator-product-1.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
@@ -216,7 +234,7 @@ const projectData = [
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/fullstack-entities-1.png",
+      "src": "/img/frontend-presentation-1.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
@@ -298,7 +316,7 @@ const projectData = [
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/fullstack-entities-1.png",
+      "src": "/img/frontend-social-media-module.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
