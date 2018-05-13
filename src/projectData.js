@@ -156,6 +156,10 @@ const projectData = [
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
+    "video": {
+      //"url": "https://vimeo.com/269493665"
+      "url": "/video/showcase.mov"
+    },
     "kind": ['User Experience design', 'Application development'],
     "tech": ['LAMP Stack', 'YII 2' , 'Bootstrap 3', 'JQuery', 'AJAX'],
     "github": [
@@ -196,6 +200,10 @@ const projectData = [
       "src": "/img/mobile-simulator-product-1.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
+    },
+    "video": {
+      //"url": "https://vimeo.com/269494540"
+      "url": "/video/mobile-app.mp4"
     },
     "kind": ['User Experience', 'UI Design', 'Application development'],
     "tech": ['LAMP Stack', 'YII 2' , 'JQuery Mobile', 'AJAX'],
@@ -311,7 +319,7 @@ const projectData = [
   {
     "id": 8,
     "title": "Modular frontend design - II",
-    "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+    "body": "Sample product presentation page based on analysis shown in previous project.",
     "image": "/img/frontend-social-media-module.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
@@ -319,6 +327,10 @@ const projectData = [
       "src": "/img/frontend-social-media-module.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
+    },
+    "video": {
+      //"url": "https://vimeo.com/269502713"
+      "url": "/video/product_pres.mp4"
     },
     "kind": ['Relational design', 'Application architecture'],
     "tech": ['YII 2' ,'mySQL'],
@@ -338,8 +350,8 @@ const projectData = [
     ],
     "demos": [
       {
-        "label": "Entity manager",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080"
+        "label": "Product Presentation",
+        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com/product/iphone5s-claro"
       }
     ],
     "relatedProjects": [

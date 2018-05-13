@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { PopupboxContainer, PopupboxManager } from 'react-popupbox';
 import 'react-popupbox/dist/react-popupbox.css';
 
+import ReactPlayer from 'react-player';
+
 class ProjectItemImages extends Component {
 
     constructor(props) {
@@ -44,15 +46,23 @@ class ProjectItemImages extends Component {
 
         const {
             project: {
-                posterImage
+                posterImage,
+                video
                 }
             } = this.state;
 
     return(
 
             <div className="right column">
-                
-                {posterImage &&
+
+                {
+                    video &&
+                    <ReactPlayer url={video.url} controls="true" />
+                }
+
+
+
+                {posterImage && !video &&
                 <img
                     className="projectItemPoster"
                     src={posterImage.src}
