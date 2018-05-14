@@ -57,14 +57,21 @@ class ProjectItemImages extends Component {
 
                 {
                     video &&
-                    <ReactPlayer url={video.url} controls="true" />
+                    <ReactPlayer
+                        className="videoPlayer projectItemMedia"
+                        width="540px"
+                        url={video.url}
+                        controls="true"
+                        poster={posterImage && posterImage.src}
+                        fileConfig={{ attributes: { poster: posterImage && posterImage.src } }}
+                        />
                 }
 
 
 
                 {posterImage && !video &&
                 <img
-                    className="projectItemPoster"
+                    className="posterImage projectItemMedia"
                     src={posterImage.src}
                     data-src={posterImage.src}
                     onClick={this.openPopupbox} />

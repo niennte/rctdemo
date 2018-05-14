@@ -148,7 +148,7 @@ class ProjectItem extends Component {
                 <section className="header">
                 <header>
                     <h1>{title}</h1>
-                    <p>{body}...</p>
+                    <p>{body}</p>
                 </header>
                 </section>
 
@@ -157,9 +157,7 @@ class ProjectItem extends Component {
                         <ProjectItemLinks project={this.state.project} />
                     </div>
 
-
-                        <ProjectItemImages project={this.state.project} />
-
+                    <ProjectItemImages project={this.state.project} />
                 </section>
             </div>
 

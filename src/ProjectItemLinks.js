@@ -74,7 +74,7 @@ class ProjectItemLinks extends Component {
                                         {item.label}
                                     </Link>
                                 )
-                            }) : ""
+                            }) : "This project has no demo."
                         }
                     </ul>
                 </dd>
@@ -93,7 +93,7 @@ class ProjectItemLinks extends Component {
                                         {item.label}
                                     </Link>
                                 )
-                            }) : ""
+                            }) : "This project has no code."
                         }
                     </ul>
                 </dd>

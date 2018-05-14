@@ -13,7 +13,7 @@ class Home extends Component {
                 title: 'Frontend projects'
             },
             backendLink: {
-                faveList: [3,11,12],
+                faveList: [2,3,11,12],
                 title: 'Backend projects'
             },
             frontEndAnimationId: "earsUp",

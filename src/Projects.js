@@ -122,7 +122,11 @@ class Projects extends Component {
                                     }
 
                                     <Link to={`/projects/${p.id}`}>
-                                        {p.title}-{p.id}
+                                        {p.title}
+
+                                        <span className="innerWrap">
+                                            {p.body}
+                                        </span>
                                     </Link>
                                 </Animated.div>
                             </Transition>                            

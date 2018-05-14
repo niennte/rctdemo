@@ -43,18 +43,18 @@ const projectData = [
   {
     "id": 2,
     "title": "Usability analysis",
-    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "image": "/img/analysis-usability-1.png",
+    "body": "Analysis of the application usability to enhance user experience.",
+    "image": "/img/analysis-usability-2.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/analysis-usability-1.png",
+      "src": "/img/analysis-usability-2.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "images": [
       {
-        "src": "/img/analysis-usability-1.png",
+        "src": "/img/analysis-usability-2.png",
         "title": "Screenshot of the view with filter open",
         "alt": "Screenshot of the view with filter open"
       },
@@ -71,27 +71,7 @@ const projectData = [
 
     ],
     "kind": ['Relational design', 'Application architecture'],
-    "tech": ['YII 2' ,'mySQL'],
-    "github": [
-      {
-        "label": "Common models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
-      },
-      {
-        "label": "Common models with relationships and business rules",
-        "URL": "https://github.com/niennte/isk2/tree/master/common/models"
-      },
-      {
-        "label": "Entity Manager controllers",
-        "URL": "URL"
-      }
-    ],
-    "demos": [
-      {
-        "label": "Entity manager",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080"
-      }
-    ],
+    "tech": ['Analysis'],
     "relatedProjects": [
       {
         "id": 2,
@@ -101,40 +81,40 @@ const projectData = [
   },
   {
     "id": 3,
-    "title": "Relational design",
-    "body": "Add database entities, models and relationships to provide for desired User Experience.",
-    "image": "/img/fullstack-entities-1x1000.png",
+    "title": "Relational design and framework development",
+    "body": "Database design to model user experience enhancements. In the demo, please use login name 'guest' and password 'password'.",
+    "image": "/img/fullstack-entities-5.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/fullstack-entities-1x1000.png",
+      "src": "/img/fullstack-entities-5.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "kind": ['Relational design', 'Application design', 'Application development'],
-    "tech": ['LAMP stack', 'YII 2' , 'MVC'],
+    "tech": ['LAMP stack', 'YII2' , 'MVC'],
     "github": [
       {
-        "label": "Models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
+          "label": "Base models",
+          "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
       },
       {
-        "label": "Service",
-        "URL": "https://github.com/niennte/isk2/blob/master/common/models/filter/Filters.php"
+          "label": "Common models with relationships and business rules",
+          "URL": "https://github.com/niennte/isk2/tree/master/common/models"
       },
       {
-        "label": "Entity Manager controllers",
-        "URL": "https://github.com/niennte/isk2/tree/master/backend/controllers"
+          "label": "Controllers",
+          "URL": "https://github.com/niennte/isk2/tree/master/backend/controllers"
       },
       {
-        "label": "Entity Manager views",
-        "URL": "https://github.com/niennte/isk2/tree/master/backend/views"
+          "label": "Views",
+          "URL": "https://github.com/niennte/isk2/tree/master/backend/views"
       }
     ],
     "demos": [
       {
-        "label": "Entity manager \n(username 'guest', password 'password')",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080"
+        "label": "Entity manager",
+        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080/product/view?id=159"
       }
     ],
     "relatedProjects": [
@@ -147,7 +127,7 @@ const projectData = [
   {
     "id": 4,
     "title": "User experience modelling - I",
-    "body": "World's shortest path to meaningful conversion (please click top left in the demo)",
+    "body": "Feature development. Search products and display selection based on user criteria",
     "image": "/img/fullstack-showcase-3.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
@@ -158,23 +138,23 @@ const projectData = [
     },
     "video": {
       //"url": "https://vimeo.com/269493665"
-      "url": "/video/showcase.mov"
+      "url": "/video/showcase-1.mp4"
     },
     "kind": ['User Experience design', 'Application development'],
-    "tech": ['LAMP Stack', 'YII 2' , 'Bootstrap 3', 'JQuery', 'AJAX'],
+    "tech": ['LAMP Stack', 'YII2' , 'Bootstrap3', 'JQuery', 'AJAX'],
     "github": [
       {
-        "label": "Wrapper service",
+        "label": "Wrapper service (model)",
         "URL": "https://github.com/niennte/isk2/blob/master/common/models/filter/Filters.php"
       },
       {
         "label": "Wrapper controller",
-        "URL": "https://github.com/niennte/isk2/tree/frontend/controllers/site"
+        "URL": "https://github.com/niennte/isk2/blob/master/frontend/controllers/SiteController.php"
       }
     ],
     "demos": [
       {
-        "label": "Showcase Demo",
+        "label": "Open in browser",
         "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com"
       },
       {
@@ -189,10 +169,10 @@ const projectData = [
       }
     ]
   },
-  { /* https://vimeo.com/52125413 */
+  {
     "id": 5,
     "title": "User experience modelling - II",
-    "body": "World's shortest path to meaningful conversion (please click bottom right in the demo)",
+    "body": "Self populating mobile app based on core user experience.",
     "image": "/img/mobile-simulator-product-1.png",
     "imageTitle": "Screenshot of the mobile view with filter open",
     "imageAlt": "Screenshot of the mobile view with filter open",
@@ -206,16 +186,20 @@ const projectData = [
       "url": "/video/mobile-app.mp4"
     },
     "kind": ['User Experience', 'UI Design', 'Application development'],
-    "tech": ['LAMP Stack', 'YII 2' , 'JQuery Mobile', 'AJAX'],
+    "tech": ['LAMP Stack', 'YII2' , 'JQueryMobile', 'AJAX'],
     "github": [
       {
         "label": "Wrapper service",
         "URL": "https://github.com/niennte/isk2/blob/master/common/models/filter/Filters.php"
       },
       {
-        "label": "Mobile controller",
+        "label": "Wrapper controller",
         "URL": "https://github.com/niennte/isk2/blob/master/frontend/controllers/MobileController.php"
-      }
+      },
+        {
+            "label": "Dynamic frontend",
+            "URL": "https://github.com/niennte/isk2/blob/master/frontend/web/js/mobile/js/commonLight.js"
+        }
     ],
     "demos": [
       {
@@ -236,38 +220,18 @@ const projectData = [
   },
   {
     "id": 6,
-    "title": "Modular frontend design",
-    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
-    "image": "/img/frontend-presentation-1.png",
+    "title": "Modular frontend design - I",
+    "body": "Analysing technical requirements, design and interactions for a landing page to present newly released product.",
+    "image": "/img/frontend-presentation-2.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/frontend-presentation-1.png",
+      "src": "/img/frontend-presentation-2.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "kind": ['Relational design', 'Application architecture'],
-    "tech": ['YII 2' ,'mySQL'],
-    "github": [
-      {
-        "label": "Common models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
-      },
-      {
-        "label": "Common models with relationships and business rules",
-        "URL": "https://github.com/niennte/isk2/tree/master/common/models"
-      },
-      {
-        "label": "Entity Manager controllers",
-        "URL": "URL"
-      }
-    ],
-    "demos": [
-      {
-        "label": "Product Presentation",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com/product/iphone5s-claro"
-      }
-    ],
+    "tech": ['Analysis'],
     "relatedProjects": [
       {
         "id": 2,
@@ -319,12 +283,12 @@ const projectData = [
   {
     "id": 8,
     "title": "Modular frontend design - II",
-    "body": "Sample product presentation page based on analysis shown in previous project.",
-    "image": "/img/frontend-social-media-module.png",
+    "body": "Product release presentation based on analysis shown in previous project.",
+    "image": "/img/frontend-presentation-3.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/frontend-social-media-module.png",
+      "src": "/img/frontend-presentation-3.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
@@ -336,16 +300,8 @@ const projectData = [
     "tech": ['YII 2' ,'mySQL'],
     "github": [
       {
-        "label": "Common models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
-      },
-      {
-        "label": "Common models with relationships and business rules",
-        "URL": "https://github.com/niennte/isk2/tree/master/common/models"
-      },
-      {
-        "label": "Entity Manager controllers",
-        "URL": "URL"
+        "label": "Controller",
+        "URL": "https://github.com/niennte/isk2/blob/master/frontend/controllers/ProductController.php"
       }
     ],
     "demos": [
@@ -446,36 +402,24 @@ const projectData = [
   },*/
   {
     "id": 11,
-    "title": "Integrating a web app with an distribution API platform",
-    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "image": "/img/backend-oauth2.png",
+    "title": "Integrating a web app with an app distribution platform (oAuth2, SSO)",
+    "body": "Connector to enable application to communicate with digatal marketplace, managing user accounts and subscriptions. The user gets logged in via SSO, and the application gets authorized using OAuth2 mechanisms.",
+    //"image": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4291/original/oidc-20graph-201.png",
+    "image": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4292/original/oidc-20graph-202.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/fullstack-entities-1.png",
+      //"src": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4291/original/oidc-20graph-201.png",
+      "src": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4292/original/oidc-20graph-202.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "kind": ['Relational design', 'Application architecture'],
-    "tech": ['YII 2' ,'mySQL'],
+    "tech": ['Spring Boot', 'Tomcat', 'Hibernate', 'OAuth2', 'SSO'],
     "github": [
       {
-        "label": "Common models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
-      },
-      {
-        "label": "Common models with relationships and business rules",
-        "URL": "https://github.com/niennte/isk2/tree/master/common/models"
-      },
-      {
-        "label": "Entity Manager controllers",
-        "URL": "URL"
-      }
-    ],
-    "demos": [
-      {
-        "label": "Entity manager",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080"
+        "label": "Sample API connector using AppDirect API",
+        "URL": "https://github.com/niennte/appdirect"
       }
     ],
     "relatedProjects": [
@@ -487,36 +431,24 @@ const projectData = [
   },
   {
     "id": 12,
-    "title": "Entity - control- boundary, experimental",
+    "title": "Entity - control- boundary app, experimental",
     "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "image": "/img/backend-mcb.png",
+    //"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png",
+    "image": "/img/backend-entity-control-boundary.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/fullstack-entities-1.png",
+      //"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png",
+      "src": "/img/backend-entity-control-boundary.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "kind": ['Relational design', 'Application architecture'],
-    "tech": ['YII 2' ,'mySQL'],
+    "tech": ['Apache' , 'PostgreSQL', 'Zend3', 'PHP', 'Doctrine', 'Entity-control-boundary', 'Sandwich testing'],
     "github": [
       {
-        "label": "Common models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
-      },
-      {
-        "label": "Common models with relationships and business rules",
-        "URL": "https://github.com/niennte/isk2/tree/master/common/models"
-      },
-      {
-        "label": "Entity Manager controllers",
-        "URL": "URL"
-      }
-    ],
-    "demos": [
-      {
-        "label": "Entity manager",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080"
+        "label": "Payroll application",
+        "URL": "https://github.com/niennte/prapp"
       }
     ],
     "relatedProjects": [
