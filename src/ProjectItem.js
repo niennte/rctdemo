@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as Animated from "animated/lib/targets/react-dom";
 import { Link } from "react-router-dom";
 import ProjectItemLinks from './ProjectItemLinks';
-import ProjectItemImages from './ProjectItemImages';
+import ProjectItemMedia from './ProjectItemMedia';
 
 class ProjectItem extends Component {
 
@@ -32,7 +32,6 @@ class ProjectItem extends Component {
         });
         if (project.length) {
             this.setState({ project: project[0] });
-            //p.isFaved = faves.faveList.indexOf(p.id) > -1;
             this.setState({ isFaved: faves.faveList.indexOf(this.state.project.id) > -1});
             setTimeout(
                 () =>
@@ -59,9 +58,6 @@ class ProjectItem extends Component {
                 id,
                 title,
                 body,
-                image,
-                imageTitle,
-                imageAlt,
                 nextProject,
                 prevProject
                 },
@@ -157,7 +153,7 @@ class ProjectItem extends Component {
                         <ProjectItemLinks project={this.state.project} />
                     </div>
 
-                    <ProjectItemImages project={this.state.project} />
+                    <ProjectItemMedia project={this.state.project} />
                 </section>
             </div>
 

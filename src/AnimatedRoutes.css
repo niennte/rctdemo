@@ -439,3 +439,13 @@ form.contactForm {
     opacity: 0.9;
     color: #555;
 }
+
+/* Fave bar */
+.topBar .shareFaveLink {
+    display:inline-block;
+    padding: 3px;
+}
+
+.topBar .shareFaveLink:hover {
+    cursor: pointer;
+}

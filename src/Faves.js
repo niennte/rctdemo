@@ -13,7 +13,7 @@ class Faves extends Component {
             faves: [],
             animations: [],
             msg: "No favorites yet. Please click some hearts ",
-            title: "Faved Projects" // default
+            title: "Some Projects from Irin's portfolio" // default
         };
     }
 
@@ -137,6 +137,9 @@ class Faves extends Component {
                                 <Animated.div className="project-grid-item" style={style}>
                                     <Link to={`/faves/${p.id}`}>
                                         {p.title}-{p.id}
+                                        <span className="innerWrap">
+                                            {p.body}
+                                        </span>
                                     </Link>
                                 </Animated.div>
                             </Transition>

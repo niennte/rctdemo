@@ -5,9 +5,6 @@ class ProjectItemLinks extends Component {
 
     constructor(props) {
         super(props);
-
-        console.log(props);
-
         this.state = {
             project: props.project
         };
@@ -23,28 +20,15 @@ class ProjectItemLinks extends Component {
 
         const {
             project: {
-                kind,
                 tech,
                 github,
-                demos,
-                relatedProjects
-                },
-            referredBy } = this.state;
-
-            console.log(this.state);
-
-
-        if (kind && kind.length) {
-            // rename Links into Meta
-            // <ProjectItemTextList list={kind} />
-            // <ProjectItemLinkList list={kind} />
-        }
+                demos
+                }
+            } = this.state;
 
 
         return(
             <dl>
-
-
                 <dt>Stack: </dt>
                 <dd>
                     <ul>
@@ -60,7 +44,7 @@ class ProjectItemLinks extends Component {
                     </ul>
                 </dd>
 
-                <dt>{"{demo}"}</dt>
+                <dt>{"{demos}"}</dt>
                 <dd>
                     <ul>
                         {demos && demos.length ?

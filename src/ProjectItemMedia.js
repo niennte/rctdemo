@@ -5,13 +5,10 @@ import 'react-popupbox/dist/react-popupbox.css';
 
 import ReactPlayer from 'react-player';
 
-class ProjectItemImages extends Component {
+class ProjectItemMedia extends Component {
 
     constructor(props) {
         super(props);
-
-        console.log(props);
-
         this.state = {
             project: props.project,
             photoIndex: 0,
@@ -34,7 +31,7 @@ class ProjectItemImages extends Component {
             config: {
                 titleBar: {
                     enable: true,
-                    text: 'Meow!\n Im multi line'
+                    text: e.target.dataset.title
                 },
                 fadeIn: true,
                 fadeInSpeed: 500
@@ -46,6 +43,8 @@ class ProjectItemImages extends Component {
 
         const {
             project: {
+                title,
+                body,
                 posterImage,
                 video
                 }
@@ -55,18 +54,15 @@ class ProjectItemImages extends Component {
 
             <div className="right column">
 
-                {
-                    video &&
+                {video &&
                     <ReactPlayer
                         className="videoPlayer projectItemMedia"
                         width="540px"
                         url={video.url}
                         controls="true"
-                        poster={posterImage && posterImage.src}
                         fileConfig={{ attributes: { poster: posterImage && posterImage.src } }}
                         />
                 }
-
 
 
                 {posterImage && !video &&
@@ -74,6 +70,7 @@ class ProjectItemImages extends Component {
                     className="posterImage projectItemMedia"
                     src={posterImage.src}
                     data-src={posterImage.src}
+                    data-title={`${title}. ${body}`}
                     onClick={this.openPopupbox} />
                 }
 
@@ -84,4 +81,4 @@ class ProjectItemImages extends Component {
     }
 }
 
-export default ProjectItemImages;
+export default ProjectItemMedia;

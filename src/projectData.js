@@ -1,45 +1,4 @@
 const projectData = [
-  /*{
-    "id": 1,
-    "title": "Application change and worfklow analysis",
-    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "image": "/img/analysis-business.png",
-    "imageTitle": "Screenshot of the view with filter open",
-    "imageAlt": "Screenshot of the view with filter open",
-    "posterImage": {
-      "src": "/img/fullstack-entities-1.png",
-      "title": "Screenshot of the view with filter open",
-      "alt": "Screenshot of the view with filter open"
-    },
-    "kind": ['Relational design', 'Application architecture'],
-    "tech": ['YII 2' ,'mySQL'],
-    "github": [
-      {
-        "label": "Common models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
-      },
-      {
-        "label": "Common models with relationships and business rules",
-        "URL": "https://github.com/niennte/isk2/tree/master/common/models"
-      },
-      {
-        "label": "Entity Manager controllers",
-        "URL": "URL"
-      }
-    ],
-    "demos": [
-      {
-        "label": "Entity manager",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080"
-      }
-    ],
-    "relatedProjects": [
-      {
-        "id": 2,
-        "label": "Usability analysis"
-      }
-    ]
-  },*/
   {
     "id": 2,
     "title": "Usability analysis",
@@ -137,7 +96,6 @@ const projectData = [
       "alt": "Screenshot of the view with filter open"
     },
     "video": {
-      //"url": "https://vimeo.com/269493665"
       "url": "/video/showcase-1.mp4"
     },
     "kind": ['User Experience design', 'Application development'],
@@ -182,7 +140,6 @@ const projectData = [
       "alt": "Screenshot of the view with filter open"
     },
     "video": {
-      //"url": "https://vimeo.com/269494540"
       "url": "/video/mobile-app.mp4"
     },
     "kind": ['User Experience', 'UI Design', 'Application development'],
@@ -239,47 +196,6 @@ const projectData = [
       }
     ]
   },
-  /*{
-    "id": 7,
-    "title": "Modular frontend design - I",
-    "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
-    "image": "/img/frontend-product-module.png",
-    "imageTitle": "Screenshot of the view with filter open",
-    "imageAlt": "Screenshot of the view with filter open",
-    "posterImage": {
-      "src": "/img/fullstack-entities-1.png",
-      "title": "Screenshot of the view with filter open",
-      "alt": "Screenshot of the view with filter open"
-    },
-    "kind": ['Relational design', 'Application architecture'],
-    "tech": ['YII 2' ,'mySQL'],
-    "github": [
-      {
-        "label": "Common models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
-      },
-      {
-        "label": "Common models with relationships and business rules",
-        "URL": "https://github.com/niennte/isk2/tree/master/common/models"
-      },
-      {
-        "label": "Entity Manager controllers",
-        "URL": "URL"
-      }
-    ],
-    "demos": [
-      {
-        "label": "Entity manager",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080"
-      }
-    ],
-    "relatedProjects": [
-      {
-        "id": 2,
-        "label": "Usability analysis"
-      }
-    ]
-  },*/
   {
     "id": 8,
     "title": "Modular frontend design - II",
@@ -293,11 +209,10 @@ const projectData = [
       "alt": "Screenshot of the view with filter open"
     },
     "video": {
-      //"url": "https://vimeo.com/269502713"
       "url": "/video/product_pres.mp4"
     },
     "kind": ['Relational design', 'Application architecture'],
-    "tech": ['YII 2' ,'mySQL'],
+    "tech": ['YII 2','mySQL', 'jQuery', 'CSS', 'Bootstrap', 'AJAX'],
     "github": [
       {
         "label": "Controller",
@@ -317,99 +232,14 @@ const projectData = [
       }
     ]
   },
-  /*{
-    "id": 9,
-    "title": "Modular frontend design - III",
-    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "image": "/img/frontend-gallery-module.png",
-    "imageTitle": "Screenshot of the view with filter open",
-    "imageAlt": "Screenshot of the view with filter open",
-    "posterImage": {
-      "src": "/img/fullstack-entities-1.png",
-      "title": "Screenshot of the view with filter open",
-      "alt": "Screenshot of the view with filter open"
-    },
-    "kind": ['Relational design', 'Application architecture'],
-    "tech": ['YII 2' ,'mySQL'],
-    "github": [
-      {
-        "label": "Common models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
-      },
-      {
-        "label": "Common models with relationships and business rules",
-        "URL": "https://github.com/niennte/isk2/tree/master/common/models"
-      },
-      {
-        "label": "Entity Manager controllers",
-        "URL": "URL"
-      }
-    ],
-    "demos": [
-      {
-        "label": "Entity manager",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080"
-      }
-    ],
-    "relatedProjects": [
-      {
-        "id": 2,
-        "label": "Usability analysis"
-      }
-    ]
-  },*/
-
-  /*{
-    "id": 10,
-    "title": "Modular frontend design - IV",
-    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",
-    "image": "/img/frontend-cart-module.png",
-    "imageTitle": "Screenshot of the view with filter open",
-    "imageAlt": "Screenshot of the view with filter open",
-    "posterImage": {
-      "src": "/img/fullstack-entities-1.png",
-      "title": "Screenshot of the view with filter open",
-      "alt": "Screenshot of the view with filter open"
-    },
-    "kind": ['Relational design', 'Application architecture'],
-    "tech": ['YII 2' ,'mySQL'],
-    "github": [
-      {
-        "label": "Common models",
-        "URL": "https://github.com/niennte/isk2/commit/6e2ee0d3060130659068bb414838e900dd4867cb"
-      },
-      {
-        "label": "Common models with relationships and business rules",
-        "URL": "https://github.com/niennte/isk2/tree/master/common/models"
-      },
-      {
-        "label": "Entity Manager controllers",
-        "URL": "URL"
-      }
-    ],
-    "demos": [
-      {
-        "label": "Entity manager (UN 'guest', PW 'password')",
-        "URL": "http://ec2-52-87-238-76.compute-1.amazonaws.com:8080"
-      }
-    ],
-    "relatedProjects": [
-      {
-        "id": 2,
-        "label": "Usability analysis"
-      }
-    ]
-  },*/
   {
     "id": 11,
     "title": "Integrating a web app with an app distribution platform (oAuth2, SSO)",
     "body": "Connector to enable application to communicate with digatal marketplace, managing user accounts and subscriptions. The user gets logged in via SSO, and the application gets authorized using OAuth2 mechanisms.",
-    //"image": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4291/original/oidc-20graph-201.png",
     "image": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4292/original/oidc-20graph-202.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      //"src": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4291/original/oidc-20graph-201.png",
       "src": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4292/original/oidc-20graph-202.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
@@ -432,13 +262,11 @@ const projectData = [
   {
     "id": 12,
     "title": "Entity - control- boundary app, experimental",
-    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    //"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png",
+    "body": "An experiment to organize an application so as to address known MVC issues (business rules not mapping to relation model result in tight coupling between the model, the controller, and the view.",
     "image": "/img/backend-entity-control-boundary.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      //"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png",
       "src": "/img/backend-entity-control-boundary.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
@@ -457,31 +285,7 @@ const projectData = [
         "label": "Usability analysis"
       }
     ]
-  },
-  /*{
-    "id": 15,
-    "title": "Entity - control- boundary, experimental",
-    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "image": "/img/placeholder-2.png",
-    "imageTitle": "Screenshot of the view with filter open",
-    "imageAlt": "Screenshot of the view with filter open"
-  },*/
-  /*{
-    "id": 13,
-    "title": "Entity - control- boundary, experimental",
-    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "image": "/img/creative-logo.jpg",
-    "imageTitle": "Screenshot of the view with filter open",
-    "imageAlt": "Screenshot of the view with filter open"
-  },
-  {
-    "id": 14,
-    "title": "Entity - control- boundary, experimental",
-    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
-    "image": "/img/creative-animation-character.png",
-    "imageTitle": "Screenshot of the view with filter open",
-    "imageAlt": "Screenshot of the view with filter open"
-  }*/
+  }
 ];
 
 export default projectData;

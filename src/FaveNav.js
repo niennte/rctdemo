@@ -90,8 +90,7 @@ C471.904,339.848,433.271,301.214,385.513,301.214z">
                         textAlign: "center"
                     }}>
                     <ModalHeader toggle={this.toggle}>
-                        Save your faves for posterity:<br/>
-                        <small>...or write down on a piece of paper: I have no idea what they are, because I respect your privacy and won't nag you for username, password, contacts, and I won't collect you IP address, fingerprints, DNA samples, and eye iris retina.</small>
+                        Save or share favorites:<br/>
                     </ModalHeader>
                     <ModalBody>
                         <textarea
@@ -138,6 +137,7 @@ C471.904,339.848,433.271,301.214,385.513,301.214z">
                         <Button color="secondary" onClick={this.toggle}>Cancel</Button>
 
                         {this.state.copied ? <span style={{color: 'red'}}>Link copied!</span> : null}
+
                     </ModalFooter>
                 </Modal>
             </span>
