@@ -3,27 +3,27 @@ const projectData = [
     "id": 2,
     "title": "Usability analysis",
     "body": "Analysis of the application usability to enhance user experience.",
-    "image": "/img/analysis-usability-2.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/analysis-usability-2.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/analysis-usability-2.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/analysis-usability-2.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "images": [
       {
-        "src": "/img/analysis-usability-2.png",
+        "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/analysis-usability-2.png",
         "title": "Screenshot of the view with filter open",
         "alt": "Screenshot of the view with filter open"
       },
       {
-        "src": "/img/placeholder-2.jpg",
+        "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/placeholder-2.jpg",
         "title": "Screenshot of the view with filter open",
         "alt": "Screenshot of the view with filter open"
       },
       {
-        "src": "/img/placeholder.jpg",
+        "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/placeholder.jpg",
         "title": "Screenshot of the view with filter open",
         "alt": "Screenshot of the view with filter open"
       },
@@ -42,11 +42,11 @@ const projectData = [
     "id": 3,
     "title": "Relational design and framework development",
     "body": "Database design to model user experience enhancements. In the demo, please use login name 'guest' and password 'password'.",
-    "image": "/img/fullstack-entities-5.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/fullstack-entities-5.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/fullstack-entities-5.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/fullstack-entities-5.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
@@ -87,16 +87,17 @@ const projectData = [
     "id": 4,
     "title": "User experience modelling - I",
     "body": "Feature development. Search products and display selection based on user criteria",
-    "image": "/img/fullstack-showcase-3.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/fullstack-showcase-3.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/fullstack-showcase-3.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/fullstack-showcase-3.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "video": {
-      "url": "/video/showcase-1.mp4"
+      //"url": "/video/showcase-1.mp4"
+      "url": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/video/showcase-1.mp4"
     },
     "kind": ['User Experience design', 'Application development'],
     "tech": ['LAMP Stack', 'YII2' , 'Bootstrap3', 'JQuery', 'AJAX'],
@@ -131,16 +132,16 @@ const projectData = [
     "id": 5,
     "title": "User experience modelling - II",
     "body": "Self populating mobile app based on core user experience.",
-    "image": "/img/mobile-simulator-product-1.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/mobile-simulator-product-1.png",
     "imageTitle": "Screenshot of the mobile view with filter open",
     "imageAlt": "Screenshot of the mobile view with filter open",
     "posterImage": {
-      "src": "/img/mobile-simulator-product-1.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/mobile-simulator-product-1.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "video": {
-      "url": "/video/mobile-app.mp4"
+      "url": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/video/mobile-app.mp4"
     },
     "kind": ['User Experience', 'UI Design', 'Application development'],
     "tech": ['LAMP Stack', 'YII2' , 'JQueryMobile', 'AJAX'],
@@ -179,11 +180,11 @@ const projectData = [
     "id": 6,
     "title": "Modular frontend design - I",
     "body": "Analysing technical requirements, design and interactions for a landing page to present newly released product.",
-    "image": "/img/frontend-presentation-2.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/frontend-presentation-2.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/frontend-presentation-2.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/frontend-presentation-2.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
@@ -200,16 +201,16 @@ const projectData = [
     "id": 8,
     "title": "Modular frontend design - II",
     "body": "Product release presentation based on analysis shown in previous project.",
-    "image": "/img/frontend-presentation-3.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/frontend-presentation-3.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/frontend-presentation-3.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/frontend-presentation-3.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "video": {
-      "url": "/video/product_pres.mp4"
+      "url": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/video/product_pres.mp4"
     },
     "kind": ['Relational design', 'Application architecture'],
     "tech": ['YII 2','mySQL', 'jQuery', 'CSS', 'Bootstrap', 'AJAX'],
@@ -236,11 +237,11 @@ const projectData = [
     "id": 11,
     "title": "Integrating a web app with an app distribution platform (oAuth2, SSO)",
     "body": "Connector to enable application to communicate with digatal marketplace, managing user accounts and subscriptions. The user gets logged in via SSO, and the application gets authorized using OAuth2 mechanisms.",
-    "image": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4292/original/oidc-20graph-202.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/backend-SSO-OAuth2.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "https://s3.amazonaws.com/doc-center/rich/rich_files/rich_files/4292/original/oidc-20graph-202.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/backend-SSO-OAuth2.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
@@ -263,11 +264,11 @@ const projectData = [
     "id": 12,
     "title": "Entity - control- boundary app, experimental",
     "body": "An experiment to organize an application so as to address known MVC issues (business rules not mapping to relation model result in tight coupling between the model, the controller, and the view.",
-    "image": "/img/backend-entity-control-boundary.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/backend-entity-control-boundary.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "/img/backend-entity-control-boundary.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/backend-entity-control-boundary.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
