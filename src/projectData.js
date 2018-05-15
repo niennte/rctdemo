@@ -3,17 +3,17 @@ const projectData = [
     "id": 2,
     "title": "Usability analysis",
     "body": "Analysis of the application usability to enhance user experience.",
-    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/analysis-usability-2.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/analysis-usability-3.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/analysis-usability-2.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/analysis-usability-3.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
     "images": [
       {
-        "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/analysis-usability-2.png",
+        "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/analysis-usability-3.png",
         "title": "Screenshot of the view with filter open",
         "alt": "Screenshot of the view with filter open"
       },
@@ -264,11 +264,11 @@ const projectData = [
     "id": 12,
     "title": "Entity - control- boundary app, experimental",
     "body": "An experiment to organize an application so as to address known MVC issues (business rules not mapping to relation model result in tight coupling between the model, the controller, and the view.",
-    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/backend-entity-control-boundary.png",
+    "image": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/backend-entity-control-boundary-1.png",
     "imageTitle": "Screenshot of the view with filter open",
     "imageAlt": "Screenshot of the view with filter open",
     "posterImage": {
-      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/backend-entity-control-boundary.png",
+      "src": "https://s3.amazonaws.com/quod.erat.demonstrandum/portfolio/img/backend-entity-control-boundary-1.png",
       "title": "Screenshot of the view with filter open",
       "alt": "Screenshot of the view with filter open"
     },
