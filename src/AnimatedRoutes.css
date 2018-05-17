@@ -20,6 +20,11 @@
     justify-content: space-between;
 }
 
+.page section.header {
+    display: block;
+    padding-bottom: 0;
+}
+
 .page section.header,
 .page section.content {
     max-width: 920px;
@@ -416,13 +421,13 @@ form.contactForm {
     display: block;
 }
 
-.page.projects .project-grid-item .innerBackdrop,
 .page.projects .project-grid-item .innerWrap {
     position: absolute;
     left: 0;
+    right:0;
+    top:0;
+    bottom:0;
     z-index: -1;
-    width: 100%;
-    height: 100%;
     opacity: 0;
     border: 0;
     background: #fff;
