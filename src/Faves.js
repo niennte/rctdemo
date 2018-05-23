@@ -124,7 +124,7 @@ class Faves extends Component {
                                 outputRange: ["12px", "0px"]
                             })},0)
                             `,
-                            backgroundImage: `url(${p.image})`
+                            backgroundImage: `url(${p.posterImage.src})`
                         };
                         return (
                             <Transition

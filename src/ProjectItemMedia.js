@@ -24,7 +24,7 @@ class ProjectItemMedia extends Component {
 
 
     openPopupbox(e) {
-        const content = <img src={e.target.dataset.src} />;
+        const content = <img src={e.target.dataset.src} />
 
         PopupboxManager.open({
             content,

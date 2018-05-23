@@ -88,7 +88,7 @@ class Projects extends Component {
                                 outputRange: ["100px", "0px"]
                             })},0)
                             `,
-                            backgroundImage: `url(${p.image})`
+                            backgroundImage: `url(${p.posterImage.src})`
                         };
                         return (
                             <Transition
